@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QLand · Rock Paper Scissors</title>
+  <meta name="description" content="Rock Paper Scissors in QLand." />
+  <link rel="stylesheet" href="./css/site.css" />
+  <style>
+    .rps-board { max-width: 420px; margin: 0 auto; text-align: center; }
+    .rps-choices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0; }
+    .rps-btn { font-size: 2.4rem; padding: 18px 10px; min-height: 80px; border-radius: 16px; background: var(--bg-btn); border: 1px solid #25415c; color: var(--text); user-select: none; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+    .rps-btn:active { transform: scale(.95); }
+    .rps-result { min-height: 32px; font-size: 1.15rem; color: var(--accent); margin: 12px 0; }
+    .rps-score { color: var(--muted); font-size: 1rem; margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <main class="container game-page">
+    <a class="btn btn-secondary" href="./index.html" style="margin-bottom:12px">← Back</a>
+    <h2 style="margin:4px 0 12px;color:var(--accent)">Rock Paper Scissors</h2>
+
+    <div class="rps-board">
+      <p class="rps-score" id="score" aria-live="polite">You: 0 · CPU: 0</p>
+      <div class="rps-choices">
+        <button class="rps-btn" data-move="rock" aria-label="Rock">🪨</button>
+        <button class="rps-btn" data-move="paper" aria-label="Paper">📄</button>
+        <button class="rps-btn" data-move="scissors" aria-label="Scissors">✂️</button>
+      </div>
+      <p class="rps-result" id="result" aria-live="polite">Choose your move</p>
+      <button class="btn btn-secondary" id="resetBtn" type="button">Reset Score</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Made with 💚 for Earth 🌍</p>
+  </footer>
+
+  <script src="./js/rps.js"></script>
+</body>
+</html>
