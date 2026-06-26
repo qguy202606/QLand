@@ -286,18 +286,6 @@
   </div>
 </header>
 
-<nav class="site-nav" id="siteNav">
-  <a href="#" data-ch="1">壹</a>
-  <a href="#" data-ch="2">貳</a>
-  <a href="#" data-ch="3">參</a>
-  <a href="#" data-ch="4">肆</a>
-</nav>
-
-<div class="top-links">
-  <a href="https://qguy202606.github.io/QLand/" target="_blank" rel="noopener">網站首頁</a>
-  <a href="#siteNav">章節目錄</a>
-</div>
-
 <div class="container">
   <div id="chapterContent"></div>
   <div class="chapter-nav" id="chapterNav"></div>
@@ -377,8 +365,7 @@ function renderChapter(n) {
   const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 前章</a>` : `<a class="disabled">← 前章</a>`;
   const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">後章 →</a>` : `<a class="disabled">後章 →</a>`;
   document.getElementById('chapterNav').innerHTML = prev + next;
-  document.getElementById('siteNav').innerHTML = ['總目',...Array.from({length:Object.keys(chapters).length},(_,i)=>['','壹','貳','參','肆','伍','陸','柒','捌'][i+1])]
-    .map((label,i)=>`<a href="#" data-ch="${i||'index'}">${label}</a>`).join('');
+  document.getElementById('siteNav').innerHTML = '';
   bindNav();
   window.scrollTo({top:0, behavior:'smooth'});
 }
