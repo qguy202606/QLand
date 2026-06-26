@@ -8,7 +8,9 @@
   :root{
     --bg:#0b0a10;
     --surface:#13111a;
+    --surface2:#1b1824;
     --text:#e4d8c4;
+    --text-dim:#a89a82;
     --accent:#d4a574;
     --accent-dim:#8b5e3c;
     --border:#2a2420;
@@ -98,40 +100,6 @@
     letter-spacing:2px;
     color:#8c6b3e;
   }
-  .chapter-nav-top{
-    position:sticky;
-    top:0;
-    z-index:50;
-    max-width:760px;
-    margin:0 auto;
-    padding:0 28px;
-    display:flex;
-    justify-content:space-between;
-    gap:16px;
-  }
-  .chapter-nav-top a{
-    flex:1;
-    max-width:200px;
-    text-align:center;
-    padding:10px;
-    background:#0c0a08;
-    border:1px solid #2e2a22;
-    color:#c8bfa8;
-    text-decoration:none;
-    font-size:13px;
-    letter-spacing:2px;
-    transition:all .25s;
-  }
-  .chapter-nav-top a:hover{
-    border-color:#4a4a4a;
-    color:#f0e8d4;
-    background:#100e0b;
-  }
-  .chapter-nav-top .disabled{
-    opacity:.2;
-    pointer-events:none;
-    color:#777;
-  }
   .container{
     max-width:760px;
     margin:0 auto;
@@ -141,13 +109,11 @@
     color:#e6d9c3;
     background:transparent;
   }
-  .chapter-meta{margin-bottom:22px}
   .chapter-num{
     font-size:13px;
     color:#c8a878;
     letter-spacing:4px;
-    margin-bottom:8px;
-    text-transform:uppercase;
+    margin-bottom:10px;
     opacity:.9;
   }
   .chapter-title{
@@ -155,7 +121,8 @@
     font-weight:500;
     color:#f1e4cc;
     letter-spacing:3px;
-    padding-bottom:16px;
+    margin-bottom:28px;
+    padding-bottom:14px;
     border-bottom:1px dashed #2a2420;
   }
   .chapter-body p{
@@ -179,7 +146,7 @@
     flex:1;
     max-width:200px;
     text-align:center;
-    padding:12px;
+    padding:12px 14px;
     background:#0c0a08;
     border:1px solid #2e2a22;
     color:#c8bfa8;
@@ -270,16 +237,11 @@
   </div>
 </header>
 
-<div class="chapter-nav-top" id="chapterNavTop"></div>
-
-<footer class="site-footer">
-  <div class="footer-text">宮闈年鑑 · Empire Chronicle</div>
-</footer>
-
 <div class="container">
   <div id="chapterContent"></div>
   <div class="chapter-nav" id="chapterNav"></div>
 </div>
+
 <footer class="site-footer">
   <div class="footer-text">宮闈年鑑 · Empire Chronicle</div>
 </footer>
@@ -307,16 +269,15 @@ function renderChapter(n){
   const ch = chapters[n];
   if (!ch) return;
   currentChapter = n;
-  document.getElementById('chapterContent').innerHTML = `<div class="chapter-meta"><div class="chapter-num">第${['','一','二','三','四','五','六','七','八'][n]}章</div><h1 class="chapter-title">${ch.title}</h1></div><div class="chapter-body">${ch.body}</div>`;
+  document.getElementById('chapterContent').innerHTML = `<div class="chapter-num">第${['','一','二','三','四','五','六','七','八'][n]}章</div><h1 class="chapter-title">${ch.title}</h1><div class="chapter-body">${ch.body}</div>`;
   const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 前章</a>` : `<a class="disabled">← 前章</a>`;
   const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">後章 →</a>` : `<a class="disabled">後章 →</a>`;
   document.getElementById('chapterNav').innerHTML = prev + next;
-  document.getElementById('chapterNavTop').innerHTML = prev + next;
   bindNav();
   window.scrollTo({top:0, behavior:'smooth'});
 }
 function bindNav(){
-  document.querySelectorAll('#chapterNav a[data-ch], #chapterNavTop a[data-ch]').forEach(a=>{
+  document.querySelectorAll('#chapterNav a[data-ch]').forEach(a=>{
     a.addEventListener('click', e=>{
       e.preventDefault();
       renderChapter(parseInt(a.dataset.ch));
