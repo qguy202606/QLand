@@ -198,37 +198,39 @@
     margin-bottom:0;
   }
   
-  /* Chapter nav pills */
   .chapter-nav{
-    padding:16px 28px;
-    border-top:1px solid var(--border);
+    padding:0 28px 28px;
     display:flex;
-    justify-content:space-between;
-    gap:12px;
+    justify-content:center;
+    gap:16px;
+    border-top:1px solid var(--border);
   }
   
   .chapter-nav a{
     flex:1;
+    max-width:200px;
     text-align:center;
-    padding:10px 14px;
-    background:var(--surface2);
-    border:1px solid var(--border);
-    color:var(--text-dim);
+    padding:12px 14px;
+    background:#080808;
+    border:1px solid #2a2a2a;
+    color:#c8bfb0;
     text-decoration:none;
     font-size:13px;
-    letter-spacing:1px;
+    letter-spacing:2px;
     transition:all .25s;
+    font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;
   }
   
   .chapter-nav a:hover{
-    border-color:var(--accent-dim);
-    color:var(--gold);
-    background:var(--surface);
+    border-color:#4a4a4a;
+    color:#e0d8c8;
+    background:#0c0c0c;
   }
   
   .chapter-nav .disabled{
-    opacity:.3;
+    opacity:.25;
     pointer-events:none;
+    color:#888;
   }
   
   /* Footer */
@@ -326,7 +328,7 @@
       <p>入宮第一天，她沒有哭，也沒有恨。她只是記得母親臨行前說的話：後宮像棋盤，總有人盯著妳。妳要走，就得先學會不動。而那盤棋，現在才剛開始擺。</p>
     </div>
     <div class="chapter-nav">
-      <a class="disabled">← 前章</a>
+      <a href="#ch1">← 前章</a>
       <a href="#ch2">後章 →</a>
     </div>
   </article>
@@ -347,7 +349,7 @@
       <p>「記恨有什麼用？」她淡淡道，「後宮裏每個人都有自己的位置。她現在有家世、有寵愛，暫時壓得過我；但我有的是時間。」她望向窗外那一角灰蒙蒙的天空，「記住，人在後宮，要的不是一時爭氣，是活到最後。」</p>
     </div>
     <div class="chapter-nav">
-      <a href="#ch1">前章 →</a>
+      <a href="#ch1">← 前章</a>
       <a href="#ch3">後章 →</a>
     </div>
   </article>
@@ -371,7 +373,7 @@
       <p>後宮的生存法則，從這一刻起，變得更加清晰。</p>
     </div>
     <div class="chapter-nav">
-      <a href="#ch2">前章 →</a>
+      <a href="#ch2">← 前章</a>
       <a href="#ch4">後章 →</a>
     </div>
   </article>
