@@ -8,9 +8,7 @@
   :root{
     --bg:#0b0a10;
     --surface:#13111a;
-    --surface2:#1b1824;
     --text:#e4d8c4;
-    --text-dim:#a89a82;
     --accent:#d4a574;
     --accent-dim:#8b5e3c;
     --border:#2a2420;
@@ -100,6 +98,40 @@
     letter-spacing:2px;
     color:#8c6b3e;
   }
+  .chapter-nav-top{
+    position:sticky;
+    top:0;
+    z-index:50;
+    max-width:760px;
+    margin:12px auto 0;
+    padding:0 28px;
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .chapter-nav-top a{
+    flex:1;
+    max-width:200px;
+    text-align:center;
+    padding:10px;
+    background:#0c0a08;
+    border:1px solid #2e2a22;
+    color:#c8bfa8;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:2px;
+    transition:all .25s;
+  }
+  .chapter-nav-top a:hover{
+    border-color:#4a4a4a;
+    color:#f0e8d4;
+    background:#100e0b;
+  }
+  .chapter-nav-top .disabled{
+    opacity:.2;
+    pointer-events:none;
+    color:#777;
+  }
   .container{
     max-width:760px;
     margin:0 auto;
@@ -155,7 +187,6 @@
     font-size:14px;
     letter-spacing:3px;
     transition:all .25s;
-    cursor:pointer;
   }
   .chapter-nav a:hover{
     border-color:#4a4a4a;
@@ -238,6 +269,9 @@
     </div>
   </div>
 </header>
+
+<div class="chapter-nav-top" id="chapterNavTop"></div>
+
 <div class="container">
   <div id="chapterContent"></div>
   <div class="chapter-nav" id="chapterNav"></div>
@@ -273,11 +307,12 @@ function renderChapter(n){
   const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 前章</a>` : `<a class="disabled">← 前章</a>`;
   const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">後章 →</a>` : `<a class="disabled">後章 →</a>`;
   document.getElementById('chapterNav').innerHTML = prev + next;
+  document.getElementById('chapterNavTop').innerHTML = prev + next;
   bindNav();
   window.scrollTo({top:0, behavior:'smooth'});
 }
 function bindNav(){
-  document.querySelectorAll('#chapterNav a[data-ch]').forEach(a=>{
+  document.querySelectorAll('#chapterNav a[data-ch], #chapterNavTop a[data-ch]').forEach(a=>{
     a.addEventListener('click', e=>{
       e.preventDefault();
       renderChapter(parseInt(a.dataset.ch));
