@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>後宮生存錄</title>
+<title>宮闈年鑑 · Empire Chronicle</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;600&display=swap');
   
@@ -35,9 +35,9 @@
   
   /* Header */
   .site-header{
-    background:linear-gradient(180deg,#1a1410 0%,#0a0808 100%);
-    border-bottom:1px solid var(--border);
-    padding:40px 20px 32px;
+    background:linear-gradient(180deg,#f3e9d2 0%,#e7dcc4 100%);
+    border-bottom:1px solid #d6c9a8;
+    padding:40px 20px 28px;
     text-align:center;
     position:relative;
   }
@@ -47,31 +47,80 @@
     position:absolute;
     top:0;left:0;right:0;
     height:2px;
-    background:linear-gradient(90deg,transparent,var(--gold),transparent);
-    opacity:.5;
+    background:linear-gradient(90deg,transparent,#b08d55,transparent);
+    opacity:.4;
+  }
+  
+  .header-inner{
+    max-width:900px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+  
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    flex:1 1 auto;
+    min-width:0;
+  }
+  
+  .title-block{
+    text-align:left;
   }
   
   .site-title{
-    font-size:clamp(24px,5vw,36px);
+    font-size:clamp(22px,4.8vw,34px);
     font-weight:600;
-    color:var(--gold);
+    color:#5a2a1a;
     letter-spacing:6px;
-    margin-bottom:8px;
-    text-shadow:0 0 30px rgba(196,154,108,.2);
+    margin-bottom:6px;
+    text-shadow:none;
   }
   
   .site-subtitle{
-    font-size:14px;
-    color:var(--text-dim);
-    letter-spacing:3px;
-    font-weight:300;
+    font-size:13px;
+    color:#6b4c3b;
+    letter-spacing:2px;
+    font-weight:400;
+    opacity:.8;
   }
   
-  .site-divider{
-    width:60px;
-    height:1px;
-    background:var(--accent-dim);
-    margin:20px auto;
+  .site-tagline{
+    font-size:12px;
+    color:#6b4c3b;
+    letter-spacing:2px;
+    font-weight:400;
+    opacity:.8;
+    margin-top:4px;
+  }
+  
+  .header-right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+  }
+  
+  .logo-circle{
+    width:72px;
+    height:72px;
+    border-radius:50%;
+    border:1.5px solid #b08d55;
+    background:#f1e8d0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  .logo-text{
+    font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;
+    font-size:11px;
+    letter-spacing:2px;
+    color:#8c6b3e;
   }
   
   /* Nav */
@@ -198,6 +247,7 @@
     margin-bottom:0;
   }
   
+  /* Chapter nav pills */
   .chapter-nav{
     padding:0 28px 28px;
     display:flex;
@@ -287,15 +337,50 @@
     .chapter-nav{padding:12px 20px;flex-direction:column}
     .site-nav{gap:16px}
     .chapter-title{font-size:18px}
+    .header-inner{flex-direction:column;align-items:flex-start;gap:14px}
+    .header-right{align-self:flex-end}
   }
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <h1 class="site-title">後宮生存錄</h1>
-  <p class="site-subtitle">卷一 · 入宮第一天，誰在盯著你</p>
-  <div class="site-divider"></div>
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-icon">
+        <svg width="44" height="44" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="12" y="28" width="40" height="24" rx="2" fill="#7c5cbf"/>
+          <rect x="18" y="18" width="28" height="22" rx="2" fill="#7c5cbf"/>
+          <polygon points="22,18 26,6 30,18" fill="#d63d8a"/>
+          <polygon points="30,18 34,2 38,18" fill="#d63d8a"/>
+          <polygon points="36,18 40,6 44,18" fill="#d63d8a"/>
+          <rect x="27" y="40" width="10" height="12" rx="1" fill="#f3e9d2"/>
+          <rect x="20" y="44" width="8" height="8" rx="1" fill="#e9e0ca"/>
+          <rect x="36" y="44" width="8" height="8" rx="1" fill="#e9e0ca"/>
+        </svg>
+      </div>
+      <div class="title-block">
+        <h1 class="site-title">宮闈年鑑</h1>
+        <p class="site-subtitle">Empire Chronicle</p>
+        <p class="site-tagline">記載宮闈、恩怨、權謀、生死與餘生</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="logo-circle">
+        <svg width="44" height="44" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="12" y="28" width="40" height="24" rx="2" fill="#7c5cbf"/>
+          <rect x="18" y="18" width="28" height="22" rx="2" fill="#7c5cbf"/>
+          <polygon points="22,18 26,6 30,18" fill="#d63d8a"/>
+          <polygon points="30,18 34,2 38,18" fill="#d63d8a"/>
+          <polygon points="36,18 40,6 44,18" fill="#d63d8a"/>
+          <rect x="27" y="40" width="10" height="12" rx="1" fill="#f3e9d2"/>
+          <rect x="20" y="44" width="8" height="8" rx="1" fill="#e9e0ca"/>
+          <rect x="36" y="44" width="8" height="8" rx="1" fill="#e9e0ca"/>
+        </svg>
+      </div>
+      <div class="logo-text">KING</div>
+    </div>
+  </div>
 </header>
 
 <nav class="site-nav">
@@ -328,7 +413,7 @@
       <p>入宮第一天，她沒有哭，也沒有恨。她只是記得母親臨行前說的話：後宮像棋盤，總有人盯著妳。妳要走，就得先學會不動。而那盤棋，現在才剛開始擺。</p>
     </div>
     <div class="chapter-nav">
-      <a href="#ch1">← 前章</a>
+      <a class="disabled">← 前章</a>
       <a href="#ch2">後章 →</a>
     </div>
   </article>
@@ -367,7 +452,7 @@
       <p>「是誰在那裏？」她問道，聲音平穩。</p>
       <p>窗外一片寂靜。過了片刻，才響起一個低沈的聲音，年輕，卻帶著不容置疑的威嚴：「是朕。」</p>
       <p>她心裏一緊。這個問題，果然來了。她趕緊起身，屈膝道：「婢妾含芳閣蘇常在，參見陛下。」</p>
-      <p>空氣裏弥漫著淡淡的桂花香气，是她白日裏在庭院裏摘的，掛在帘子邊。</p>
+      <p>空氣裏弥慢著淡淡的桂花香气，是她白日裏在庭院裏摘的，掛在帘子邊。</p>
       <p>「你下去吧。」他忽然說道，「朕不走，只是隨便坐坐。」</p>
       <p>她退出殿外，心裏卻是翻江倒海。她聽出來了：陛下對孝賢皇后還有留戀。而自己，不管是不是像，都不能讓他覺得自己是在「替代」。</p>
       <p>後宮的生存法則，從這一刻起，變得更加清晰。</p>
@@ -384,15 +469,15 @@
       <h2 class="chapter-title">圈套與反圈套</h2>
     </div>
     <div class="chapter-body">
-      <p>第二天一早，就有太監來傳話：說昨夜陛下在含芳閣駐足，让她今日去御花園伺候茶水。秋紋歡喜若狂，趕緊為她梳妝打扮，翻箱倒櫃找那件最素的衣裳，還特意把臉抹白了幾分，說這樣顯得楚楚可人。</p>
-      <p>她卻只是淡淡道：「告訴那個太監，我今日頭風發作，去不了。你替我帶句话：『婢妾蒙陛下關愛，實惶恐萬分，唯恐失儀，還請陛下恕罪。』」</p>
+      <p>第二天一早，就有太監來傳話：說昨夜陛下在含芳閣駐足，讓她今日去御花園伺候茶水。秋紋歡喜若狂，趕緊為她梳妝打扮，翻箱倒櫃找那件最素的衣裳，還特意把臉抹白了幾分，說這樣顯得楚楚可人。</p>
+      <p>她卻只是淡淡道：「告訴那個太監，我今日頭風發作，去不了。你替我帶句話：『婢妾蒙陛下關愛，實惶恐萬分，唯恐失儀，還請陛下恕罪。』」</p>
       <p>「你沒聽出來嗎？」她望著鏡中的自己，「這事太巧了。選秀才兩日，陛下夜訪，次日就让去御花園——這不是寵愛，是標靶。如果我真去了，將來所有想對付我的人，都會以爲我是新寵，第一個對付的就是我。但如果我稱病不去，又顯得不識擡舉。」她顿了顿，「『頭風』是最好的借口。我要的是，讓所有人知道，我自知身份卑微，不敢高攀。」</p>
       <p>果然，下午時分，就有消息傳來：德妃娘娘褒獎她謙遜知禮，讓她安心休養。同一時間，另一道消息也悄然後宮流傳：陛下對她的興趣，似乎也就那樣。</p>
       <p>她靠在軟枕上，聽著這些閑言碎語，嘴角浮起一抹極淡的微笑。「秋紋，去把我的針線拿來。」</p>
       <p>「後宮的女人，靠寵愛活不久；靠『沒威脅』，才能活長久。」她拿起針線，慢條斯理地穿針引線，心裏卻在盤算另一件事：負責傳話的那個太監，是誰派來的？</p>
     </div>
     <div class="chapter-nav">
-      <a href="#ch3">前章 →</a>
+      <a href="#ch3">← 前章</a>
       <a class="disabled">後章 →</a>
     </div>
   </article>
@@ -400,7 +485,7 @@
 </div>
 
 <footer class="site-footer">
-  <div class="footer-text">後宮生存錄</div>
+  <div class="footer-text">宮闈年鑑 · Empire Chronicle</div>
   <div class="footer-links">
     <a href="#">回首頁</a>
     <a href="#ch1">第一章</a>
