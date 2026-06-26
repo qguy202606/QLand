@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>屈民天地 — QLand</title>
+<style>
+  :root{
+    --bg:#0b0a10;
+    --surface:#14110d;
+    --surface2:#1b1824;
+    --text:#e4d8c4;
+    --text-dim:#a89a82;
+    --accent:#d4a574;
+    --accent-dim:#8b5e3c;
+    --border:#2a2420;
+    --gold:#c49a6c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;
+    line-height:1.9;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+  .site-header{
+    background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);
+    border-bottom:1px solid #dbcdb0;
+    padding:32px 28px;
+  }
+  .header-inner{
+    max-width:960px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+  }
+  .title-block{text-align:left}
+  .site-title{
+    font-size:46px;
+    font-weight:800;
+    color:#2a1008;
+    letter-spacing:7px;
+  }
+  .site-subtitle{
+    font-size:24px;
+    color:#3e2212;
+    letter-spacing:3px;
+    opacity:1;
+    font-weight:700;
+    margin-top:4px;
+  }
+  .site-tagline{
+    font-size:19px;
+    color:#3e2212;
+    letter-spacing:2px;
+    margin-top:6px;
+    opacity:1;
+    font-weight:500;
+  }
+  .site-desc{
+    font-size:17px;
+    color:#2f1b10;
+    letter-spacing:1.5px;
+    margin-top:6px;
+    opacity:1;
+    font-weight:500;
+  }
+  .header-right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    flex-shrink:0;
+  }
+  .logo-circle{
+    width:66px;
+    height:66px;
+    border-radius:50%;
+    border:1.5px solid #b08d55;
+    background:#f3ecd8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .logo-text{
+    font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;
+    font-size:11px;
+    letter-spacing:2px;
+    color:#8c6b3e;
+  }
+  .container{
+    max-width:760px;
+    margin:0 auto;
+    padding:44px 28px 32px;
+    flex:1;
+    width:100%;
+    color:#e6d9c3;
+    background:transparent;
+  }
+  .chapter-num{
+    font-size:19px;
+    color:#c8a878;
+    letter-spacing:6px;
+    margin-bottom:12px;
+    text-transform:uppercase;
+    opacity:1;
+  }
+  .chapter-title{
+    font-size:30px;
+    font-weight:500;
+    color:#f1e4cc;
+    letter-spacing:3px;
+    margin-bottom:28px;
+    padding-bottom:14px;
+    border-bottom:1px dashed #2a2420;
+  }
+  .chapter-body p{
+    margin-bottom:18px;
+    font-size:19px;
+    text-align:justify;
+    text-indent:2em;
+    color:#efe3c8;
+    line-height:1.95;
+  }
+  .chapter-body p:last-child{margin-bottom:0}
+  .chapter-nav{
+    margin-top:44px;
+    padding-top:24px;
+    border-top:1px solid #2a2420;
+    display:flex;
+    justify-content:space-between;
+    gap:18px;
+  }
+  .chapter-nav a{
+    flex:1;
+    max-width:220px;
+    text-align:center;
+    padding:14px 16px;
+    background:#0c0a08;
+    border:1.5px solid #4a3c2f;
+    color:#ddd6c4;
+    text-decoration:none;
+    font-size:15px;
+    letter-spacing:4px;
+    transition:all .25s;
+  }
+  .chapter-nav a:hover{
+    border-color:#7a6d5a;
+    color:#fff;
+    background:#14110d;
+  }
+  .chapter-nav .disabled{opacity:.2;pointer-events:none;color:#777}
+  .site-footer{
+    background:#0c0a08;
+    border-top:1px solid #1f1b16;
+    padding:22px 20px;
+    text-align:center;
+    margin-top:40px;
+  }
+  .site-footer::before{
+    content:"";
+    display:block;
+    width:34px;
+    height:1px;
+    background:#6b5540;
+    margin:0 auto 14px;
+  }
+  .footer-text{
+    font-size:14px;
+    color:#a89b82;
+    letter-spacing:5px;
+    opacity:1;
+  }
+  @media(max-width:600px){
+    .container{padding:26px 18px}
+    .header-inner{flex-direction:column;align-items:flex-start;gap:12px}
+    .chapter-title{font-size:22px}
+    .site-title{font-size:28px}
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="back-link" href="/QLand/stories.html" style="color:#5a4638;text-decoration:none;font-size:15px;letter-spacing:2px">← 故事目錄</a>
+    <div class="title-block">
+      <h1 class="site-title">屈民天地</h1>
+      <p class="site-subtitle">市井系列 · Ordinary Lives</p>
+      <p class="site-tagline">巷口的燈、豆花的香、貓咪的早班。</p>
+      <p class="site-desc">QLand 生活隨筆，每一章都是一個不用加班的日子。</p>
+    </div>
+    <div class="header-right">
+      <div class="logo-circle">
+        <svg width="52" height="52" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="12" y="28" width="40" height="24" rx="2" fill="#6e4fa8"/>
+          <rect x="18" y="18" width="28" height="22" rx="2" fill="#6e4fa8"/>
+          <polygon points="22,18 26,5 30,18" fill="#c03570"/>
+          <polygon points="30,18 34,2 38,18" fill="#c03570"/>
+          <polygon points="36,18 40,5 44,18" fill="#c03570"/>
+          <rect x="27" y="40" width="10" height="12" rx="1" fill="#f3e9d2"/>
+          <rect x="20" y="44" width="8" height="8" rx="1" fill="#e6dcc4"/>
+          <rect x="36" y="44" width="8" height="8" rx="1" fill="#e6dcc4"/>
+        </svg>
+      </div>
+      <div class="logo-text">QLand</div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div id="chapterContent"></div>
+  <div class="chapter-nav" id="chapterNav"></div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-text">屈民天地 · Ordinary Lives</div>
+</footer>
+<script>
+const chapters = {
+  1: {
+    title: "早市的燈",
+    body: `<p>巷口的早市五點就開了。</p><p>阿婆的豆花攤總是第一個亮燈。她一輩子沒聽過「創業」這兩個字，只知道每天凌晨三點起床，把泡好的黃豆一顆顆倒進石磨裏，推它轉三百圈，做出一鍋能賣到中午的豆花。</p><p>「阿婆，爲什麼不買個機器？」附近的中學生路過，常這樣問。</p><p>阿婆擦著手，笑紋擠在眼角：</p><p>「機器轉得快，可是我一個人推不動。人老了，只能慢慢來。」</p><p>她的小攤沒有名字，沒有招牌，連qr code都是兒子上週強制貼上的。可是來的人都知道：這碗豆花，鹹的比甜的好吃。</p><p>老陳是對面理髮廳的師傅，每天固定買一碗甜的。</p><p>「阿婆，你今天豆花比較嫩。」</p><p>「你昨天就說比較老。」</p><p>「所以我天天說啊。」</p><p>阿婆搖頭，還是多給他一勺花生。</p><p>巷口養著一隻三花貓。沒人知道是誰養的，只知道每到豆花攤開張，牠一定準時出現，蹲在板凳上，盯著阿婆的筷子。</p><p>「小花，你也是很愛吃甜的？」阿婆問。</p><p>貓咪眨眼。</p><p>賣菜的林伯騎三輪車進巷時，總會按兩下喇叭，嚇得小花跳上屋頂。但阿婆不怕，她只顧著把豆腐搬到攤上。</p><p>「阿婆，今天行情不錯。」林伯邊卸菜邊說。</p><p>「什麼行情？」</p><p>「你沒漲價。」</p><p>阿婆笑，把一塊豆腐塞給小花。</p><p>貓咪叼著豆腐，消失在清晨的霧裏。</p><p>──</p><p>這個城市很急。每個人都在跑，趕捷運，趕打卡，趕 Deadline，趕一場又一場別人定的比賽。</p><p>但巷口的早市不趕。</p><p>它只等一盞燈亮，等一碗豆花，等一隻貓咪跳上板凳。</p><p>等你願意慢下來，聽阿婆說一句：</p><p>「雖然很慢，可是我一個人，也走到了今天。」</p><p>──</p><p>生活不是故事。</p><p>生活是最後一章。</p>`
+  }
+};
+let currentChapter = 1;
+function renderChapter(n){
+  const ch = chapters[n];
+  if (!ch) return;
+  currentChapter = n;
+  document.getElementById('chapterContent').innerHTML = `<div class="chapter-num">第${['','一','二','三','四','五','六','七','八'][n]}章</div><h1 class="chapter-title">${ch.title}</h1><div class="chapter-body">${ch.body}</div>`;
+  const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 上一章</a>` : '';
+  const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">下一章 →</a>` : '';
+  const navHtml = prev + next;
+  document.getElementById('chapterNav').innerHTML = navHtml || '<span></span>';
+  const links = document.querySelectorAll('#chapterNav a[data-ch]');
+  if (links.length) bindNav();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function bindNav(){
+  document.querySelectorAll('#chapterNav a[data-ch]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      e.preventDefault();
+      renderChapter(parseInt(a.dataset.ch));
+    });
+  });
+}
+renderChapter(1);
+</script>
+</body>
+</html>
