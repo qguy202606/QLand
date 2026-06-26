@@ -49,13 +49,13 @@
   }
   .title-block{text-align:left}
   .site-title{
-    font-size:38px;
+    font-size:46px;
     font-weight:800;
     color:#2a1008;
     letter-spacing:7px;
   }
   .site-subtitle{
-    font-size:21px;
+    font-size:24px;
     color:#3e2212;
     letter-spacing:3px;
     opacity:1;
@@ -63,7 +63,7 @@
     margin-top:4px;
   }
   .site-tagline{
-    font-size:17px;
+    font-size:19px;
     color:#3e2212;
     letter-spacing:2px;
     margin-top:6px;
@@ -71,7 +71,7 @@
     font-weight:500;
   }
   .site-desc{
-    font-size:16px;
+    font-size:17px;
     color:#2f1b10;
     letter-spacing:1.5px;
     margin-top:6px;
@@ -111,7 +111,7 @@
     margin-bottom:36px;
   }
   .section-title{
-    font-size:18px;
+    font-size:20px;
     font-weight:700;
     color:#f1e4cc;
     letter-spacing:4px;
@@ -124,13 +124,13 @@
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
     gap:18px;
-  }
   .story-card{
     display:block;
-    padding:22px 24px;
+    padding:28px 28px;
+    margin-bottom:14px;
     background:var(--surface);
     border:1px solid var(--border);
-    border-radius:10px;
+    border-radius:12px;
     color:var(--text);
     text-decoration:none;
     transition:all .25s;
@@ -140,30 +140,30 @@
   .story-card::before{
     content:"";
     position:absolute;
-    top:0;left:0;width:4px;height:100%;
+    top:0;left:0;width:5px;height:100%;
     background:var(--accent);
-    opacity:.5;
+    opacity:.45;
     transition:opacity .25s;
   }
   .story-card:hover{
     border-color:#5a4a38;
     background:var(--surface2);
     color:#fff;
-    transform:translateY(-2px);
-    box-shadow:0 8px 24px rgba(0,0,0,.4);
+    transform:translateY(-3px);
+    box-shadow:0 10px 28px rgba(0,0,0,.45);
   }
   .story-card:hover::before{opacity:1}
   .story-card h2{
-    font-size:19px;
+    font-size:24px;
     font-weight:700;
     color:#d4a574;
     letter-spacing:2px;
-    margin-bottom:8px;
+    margin-bottom:10px;
   }
   .story-card p{
-    font-size:15px;
+    font-size:18px;
     color:var(--text-dim);
-    line-height:1.6;
+    line-height:1.7;
   }
   .site-footer{
     background:#0c0a08;
