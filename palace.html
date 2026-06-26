@@ -271,8 +271,8 @@ function renderChapter(n){
   if (!ch) return;
   currentChapter = n;
   document.getElementById('chapterContent').innerHTML = `<div class="chapter-num">第${['','一','二','三','四','五','六','七','八'][n]}章</div><h1 class="chapter-title">${ch.title}</h1><div class="chapter-body">${ch.body}</div>`;
-  const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 前章</a>` : '';
-  const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">後章 →</a>` : '';
+  const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 上一章</a>` : '';
+  const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">下一章 →</a>` : '';
   const navHtml = prev + next;
   document.getElementById('chapterNav').innerHTML = navHtml || '<span></span>';
   const links = document.querySelectorAll('#chapterNav a[data-ch]');
