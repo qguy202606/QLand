@@ -33,28 +33,42 @@
     margin:0 auto;
     display:flex;
     align-items:center;
-    gap:16px;
+    justify-content:space-between;
+    gap:18px;
   }
-  .back-link{
-    color:#5a4638;
-    text-decoration:none;
-    font-size:14px;
-    letter-spacing:2px;
-    white-space:nowrap;
-  }
-  .back-link:hover{color:#2a1008}
-  .title-block{text-align:left}
-  .site-title{
-    font-size:30px;
+  .title-block h1{
+    font-size:34px;
     font-weight:800;
     color:#2a1008;
     letter-spacing:6px;
   }
-  .site-subtitle{
-    font-size:18px;
+  .title-block p{
+    font-size:16px;
     color:#3e2212;
-    letter-spacing:3px;
-    margin-top:4px;
+    letter-spacing:2px;
+    margin-top:6px;
+  }
+  .header-right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    flex-shrink:0;
+  }
+  .logo-circle{
+    width:66px;
+    height:66px;
+    border-radius:50%;
+    border:1.5px solid #b08d55;
+    background:#f3ecd8;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .logo-text{
+    font-size:11px;
+    letter-spacing:2px;
+    color:#8c6b3e;
   }
   .container{
     max-width:760px;
@@ -64,15 +78,14 @@
     width:100%;
   }
   .chapter-num{
-    font-size:13px;
+    font-size:19px;
     color:#c8a878;
     letter-spacing:4px;
     margin-bottom:10px;
     opacity:1;
   }
   .chapter-title{
-    font-size:26px;
-    font-weight:500;
+    font-size:30px;
     color:#f1e4cc;
     letter-spacing:3px;
     margin-bottom:28px;
@@ -81,7 +94,7 @@
   }
   .chapter-body p{
     margin-bottom:18px;
-    font-size:17px;
+    font-size:19px;
     text-align:justify;
     text-indent:2em;
     color:#efe3c8;
@@ -114,6 +127,7 @@
     color:#fff;
     background:#14110d;
   }
+  .chapter-nav .disabled{opacity:.2;pointer-events:none;color:#777}
   .site-footer{
     background:#0c0a08;
     border-top:1px solid #1f1b16;
@@ -137,19 +151,17 @@
   }
   @media(max-width:600px){
     .container{padding:26px 18px}
-    .header-inner{flex-direction:column;align-items:flex-start;gap:12px}
     .chapter-title{font-size:22px}
-    .site-title{font-size:28px}
   }
 </style>
 </head>
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a class="back-link" href="/QLand/stories.html">← 故事目錄</a>
+    <a class="back-link" href="/QLand/stories.html" style="color:#5a4638;text-decoration:none;font-size:14px;letter-spacing:2px">← 故事目錄</a>
     <div class="title-block">
-      <div class="site-title">青蛙</div>
-      <div class="site-subtitle">笑話 · Jokes</div>
+      <h1>青蛙</h1>
+      <p>笑話 · Jokes</p>
     </div>
     <div class="header-right">
       <div class="logo-circle">
@@ -168,7 +180,6 @@
     </div>
   </div>
 </header>
-
 <div class="container">
   <div class="chapter-num">笑話</div>
   <h1 class="chapter-title">青蛙</h1>
@@ -182,13 +193,11 @@
     <p>──</p>
     <p>誰說快，就一定贏？</p>
   </div>
-
   <div class="chapter-nav">
     <a class="disabled">← 前章</a>
     <a class="disabled">後章 →</a>
   </div>
 </div>
-
 <footer class="site-footer">
   <div class="footer-text">QLand — 繁體中文小說平台</div>
 </footer>

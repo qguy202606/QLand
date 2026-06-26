@@ -110,7 +110,7 @@
     background:transparent;
   }
   .chapter-num{
-    font-size:16px;
+    font-size:19px;
     color:#c8a878;
     letter-spacing:6px;
     margin-bottom:12px;
@@ -118,7 +118,7 @@
     opacity:1;
   }
   .chapter-title{
-    font-size:26px;
+    font-size:30px;
     font-weight:500;
     color:#f1e4cc;
     letter-spacing:3px;
@@ -128,7 +128,7 @@
   }
   .chapter-body p{
     margin-bottom:18px;
-    font-size:17px;
+    font-size:19px;
     text-align:justify;
     text-indent:2em;
     color:#efe3c8;
@@ -271,10 +271,12 @@ function renderChapter(n){
   if (!ch) return;
   currentChapter = n;
   document.getElementById('chapterContent').innerHTML = `<div class="chapter-num">第${['','一','二','三','四','五','六','七','八'][n]}章</div><h1 class="chapter-title">${ch.title}</h1><div class="chapter-body">${ch.body}</div>`;
-  const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 前章</a>` : `<a class="disabled">← 前章</a>`;
-  const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">後章 →</a>` : `<a class="disabled">後章 →</a>`;
-  document.getElementById('chapterNav').innerHTML = prev + next;
-  bindNav();
+  const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 前章</a>` : '';
+  const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">後章 →</a>` : '';
+  const navHtml = prev + next;
+  document.getElementById('chapterNav').innerHTML = navHtml || '<span></span>';
+  const links = document.querySelectorAll('#chapterNav a[data-ch]');
+  if (links.length) bindNav();
   window.scrollTo({top:0, behavior:'smooth'});
 }
 function bindNav(){
