@@ -281,7 +281,7 @@ const chapters = [
 ];
 let currentChapter = 1;
 function renderChapter(n){
-  const ch = chapters[n-1];
+  const ch = chapters[n];
   if (!ch) return;
   currentChapter = n;
   document.getElementById('chapterContent').innerHTML = `<div class="chapter-num">第${['','一','二','三','四','五','六','七','八'][n]}章</div><h1 class="chapter-title">${ch.title}</h1><div class="chapter-body">${ch.body}</div>`;
