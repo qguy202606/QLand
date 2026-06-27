@@ -33,13 +33,22 @@
     padding:28px 24px;
   }
   .header-inner{
-    max-width:920px;
+    max-width:960px;
     margin:0 auto;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:18px;
   }
+  .home-link{
+    color:#5a4638;
+    text-decoration:none;
+    font-size:14px;
+    letter-spacing:2px;
+    opacity:1;
+    transition:opacity .2s;
+  }
+  .home-link:hover{opacity:.7}
   .brand{
     display:flex;
     align-items:center;
@@ -199,6 +208,7 @@
 <body>
 <header class="site-header">
   <div class="header-inner">
+    <a class="home-link" href="/QLand/">回首頁</a>
     <div class="brand">
       <div class="brand-icon">
         <svg width="52" height="52" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

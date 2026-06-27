@@ -32,18 +32,26 @@
     max-width:920px;
     margin:0 auto;
     display:flex;
-    align-items:center;
-    gap:16px;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:24px;
   }
-  .back-link{
+
+  .breadcrumb{
+    flex:0 0 auto;
+    margin-top:8px;
+  }
+  .breadcrumb a{
     color:#5a4638;
     text-decoration:none;
-    font-size:15px;
+    font-size:14px;
     letter-spacing:2px;
-    white-space:nowrap;
+    opacity:1;
+    transition:opacity .2s;
   }
-  .back-link:hover{color:#2a1008}
-  .title-block{text-align:left}
+  .breadcrumb a:hover{opacity:.7}
+
+  .title-block{text-align:center;flex:1 1 auto;min-width:0}
   .site-title{
     font-size:34px;
     font-weight:800;
@@ -51,11 +59,12 @@
     letter-spacing:6px;
   }
   .site-subtitle{
-    font-size:20px;
+    font-size:15px;
     color:#3e2212;
     letter-spacing:3px;
     opacity:1;
     font-weight:700;
+    margin-top:4px;
   }
   .container{
     max-width:760px;
@@ -147,10 +156,27 @@
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a class="back-link" href="/QLand/stories.html">← 故事目錄</a>
+    <div class="breadcrumb">
+      <a href="/QLand/stories.html">← 故事目錄</a>
+    </div>
     <div class="title-block">
       <div class="site-title">百合</div>
-      <div class="site-subtitle">笑話 · Jokes</div>
+      <div class="site-subtitle">笑話</div>
+    </div>
+    <div class="header-right">
+      <div class="logo-circle">
+        <svg width="52" height="52" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="12" y="28" width="40" height="24" rx="2" fill="#6e4fa8"/>
+          <rect x="18" y="18" width="28" height="22" rx="2" fill="#6e4fa8"/>
+          <polygon points="22,18 26,5 30,18" fill="#c03570"/>
+          <polygon points="30,18 34,2 38,18" fill="#c03570"/>
+          <polygon points="36,18 40,5 44,18" fill="#c03570"/>
+          <rect x="27" y="40" width="10" height="12" rx="1" fill="#f3e9d2"/>
+          <rect x="20" y="44" width="8" height="8" rx="1" fill="#e6dcc4"/>
+          <rect x="36" y="44" width="8" height="8" rx="1" fill="#e6dcc4"/>
+        </svg>
+      </div>
+      <div class="logo-text">QLand</div>
     </div>
   </div>
 </header>
