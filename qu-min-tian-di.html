@@ -230,24 +230,27 @@ const chapters = {
     title: "天台上的一杯水",
     body: `<p>巷口一棟大樓的天台上，住著一個退休的郵差，大家都叫他林伯。</p><p>林伯六十五歲，退休前送了四十二年信。他的腿不好，爬樓梯要慢慢來，但每天下午三點，他一定會爬到大樓頂樓，坐在一張有裂紋的塑料椅子上。</p><p>他的「辦公室」很簡單：一個鋁合金保溫壺、一個馬克杯、一塊抹布，還有一本寫滿地址的舊記事本。</p><p>樓下住著一個大學生，叫阿杰。阿杰大三，準備考試，每天待在房裡讀書，壓力很大。</p><p>有一天，阿杰口渴，到頂樓想找水喝。他推開鐵門，看見林伯坐在那裡，手裡拿著馬克杯，望著遠方的山。</p><p>「林伯，你有沒有多餘的水？」阿杰問。</p><p>林伯點點頭，指了指保溫壺。</p><p>「謝謝。」阿杰倒了一杯，坐了下來。</p><p>他們就這樣聊了起來。林伯說他以前送信的時候，見過很多有趣的地址：山上的小廟、海邊的木屋、連在地圖上都找不到的小巷。他說每一封信，都是一個人的一部分故事。</p><p>阿杰聽了，忽然覺得自己的考試好像也沒那麼重要了。</p><p>「林伯，你退休後都在做什麼？」</p><p>「看信。」他說，「不是讀信，是看。每天坐在這裡，看看遠方，想想以前送過信的人，現在過得怎麼樣。」</p><p>阿杰接著問：「你不會覺得無聊嗎？」</p><p>「無聊？」林伯笑了，「人生哪有時間無聊。你想想，你早上醒來，還有地方可以坐，有杯子可以拿，有水可以喝，已經是福氣了。」</p><p>阿杰點點頭，喝光了杯子裡的水。</p><p>那天之後，阿杰每天都到頂樓坐一會兒。他讀書讀累了，就上去喝杯水，聽林伯講以前的故事。</p><p>就這樣過了兩個月。</p><p>考試那天，阿杰很緊張。他早起到頂樓，覺得喉嚨很乾。</p><p>他推開鐵門，發現林伯已經在那裡了，手裡拿著兩個馬克杯。</p><p>「早就知道你今天考試。」林伯微笑，「這杯水，代表順利。」</p><p>阿杰接過水，喝了一口，忽然覺得心中踏实了很多。</p><p>考試結束後，阿杰跑到頂樓，想謝謝林伯。</p><p>但鐵門鎖著。</p><p>樓下的管理員告訴他，林伯昨天摔了一跤，住院了。</p><p>阿杰拿著那本舊記事本，才知道林伯沒有家人，也沒有朋友住在附近。他唯一的陪伴，就是那本寫滿地址的書，和每天送水給樓上那個讀書的年輕人。</p><p>阿杰沒有哭。他只是靜靜地站在天台，手裡拿著馬克杯，望著遠方。</p><p>從那天起，阿杰每天下午三點都會到大樓頂樓，坐在林伯的塑料椅子上，手裡拿著馬克杯，望著遠方的山。</p><p>他知道，林伯不是離開了。</p><p>他只是換了一個地方，繼續看遠方。</p><p>──</p><p>有時候，一杯水代表的不是解渴。</p><p>它代表的是一個人願意把自己僅有的東西，分給另一個人。</p><p>而那個收到水的人，會記住這個味道很久很久。</p>`
   }
-};
-
-let currentChapter = 1;
+};let currentChapter = 1;
 function renderChapter(n){
   const ch = chapters[n];
   if (!ch) return;
   currentChapter = n;
-  document.getElementById("chapterContent").innerHTML = `<div class="chapter-num">第${["","一","二","三","四","五","六","七","八"][n]}章</div><h1 class="chapter-title">${ch.title}</h1><div class="chapter-body">${ch.body}</div>`;
-  const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 上一章</a>` : "";
-  const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">下一章 →</a>` : "";
-  document.getElementById("chapterNav").innerHTML = prev + next || "<span></span>";
-  document.querySelectorAll("#chapterNav a[data-ch]").forEach(a=>{
-    a.addEventListener("click", e=>{
+  document.getElementById('chapterContent').innerHTML = `<div class="chapter-num">第${['','一','二','三','四','五','六','七','八'][n]}章</div><h1 class="chapter-title">${ch.title}</h1><div class="chapter-body">${ch.body}</div>`;
+  const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 上一章</a>` : '';
+  const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">下一章 →</a>` : '';
+  const navHtml = prev + next;
+  document.getElementById('chapterNav').innerHTML = navHtml || '<span></span>';
+  const links = document.querySelectorAll('#chapterNav a[data-ch]');
+  if (links.length) bindNav();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function bindNav(){
+  document.querySelectorAll('#chapterNav a[data-ch]').forEach(a=>{
+    a.addEventListener('click', e=>{
       e.preventDefault();
       renderChapter(parseInt(a.dataset.ch));
     });
   });
-  window.scrollTo({top:0, behavior:"smooth"});
 }
 renderChapter(1);
 </script>
