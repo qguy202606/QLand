@@ -4,12 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>屈民天地 — QLand</title>
-<style>  :root{
+<style>
+  :root{
     --bg:#0b0a10;
+    --surface:#14110d;
+    --surface2:#1b1824;
     --text:#e4d8c4;
     --text-dim:#a89a82;
     --accent:#d4a574;
+    --accent-dim:#8b5e3c;
     --border:#2a2420;
+    --gold:#c49a6c;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -22,168 +27,48 @@
     display:flex;
     flex-direction:column;
   }
-    .site-header{
+  .site-header{
     background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);
     border-bottom:1px solid #dbcdb0;
-    padding:32px 24px;
+    padding:32px 28px;
   }
   .header-inner{
     max-width:960px;
     margin:0 auto;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    gap:24px;
-  }
-  .back-link{
-    color:#5a4638;
-    text-decoration:none;
-    font-size:20px;
-    letter-spacing:2px;
-    font-weight:700;
-    flex-shrink:0;
-    transition:opacity .2s;
-  }
-  .back-link:hover{opacity:.65}
-  .title-group{
-    text-align:center;
-    flex:1;
-    min-width:0;
-  }
-  .site-title{
-    font-size:38px;
-    font-weight:800;
-    color:#2a1008;
-    letter-spacing:6px;
-    line-height:1.2;
-  }
-  .site-subtitle{
-    font-size:17px;
-    color:#3e2212;
-    letter-spacing:3px;
-    font-weight:700;
-    margin-top:6px;
-  }
-  .header-spacer{width:120px;flex-shrink:0}
-
-  .container{
-    max-width:760px;
-    margin:0 auto;
-    padding:44px 28px 32px;
-    flex:1;
-    width:100%;
-  }
-  .chapter-num{
-    font-size:19px;
-    color:#c8a878;
-    letter-spacing:4px;
-    margin-bottom:10px;
-    opacity:1;
-  }
-  .chapter-title{
-    font-size:30px;
-    font-weight:500;
-    color:#f1e4cc;
-    letter-spacing:3px;
-    margin-bottom:28px;
-    padding-bottom:14px;
-    border-bottom:1px dashed #2a2420;
-  }
-  .chapter-body p{
-    margin-bottom:18px;
-    font-size:19px;
-    text-align:justify;
-    text-indent:2em;
-    color:#efe3c8;
-    line-height:1.95;
-  }
-  .chapter-body p:last-child{margin-bottom:0}
-  .chapter-nav{
-    margin-top:44px;
-    padding-top:24px;
-    border-top:1px solid #2a2420;
-    display:flex;
-    justify-content:space-between;
+    justify-content:center;
     gap:18px;
+    position:relative;
+    padding-top:6px;
   }
-  .chapter-nav a{
-    flex:1;
-    max-width:220px;
-    text-align:center;
-    padding:14px 16px;
-    background:#0c0a08;
-    border:1.5px solid #4a3c2f;
-    color:#ddd6c4;
-    text-decoration:none;
-    font-size:15px;
-    letter-spacing:4px;
-    transition:all .25s;
-  }
-  .chapter-nav a:hover{
-    border-color:#7a6d5a;
-    color:#fff;
-    background:#14110d;
-  }
-  .chapter-nav .disabled{opacity:.25;pointer-events:none;color:#777}
-  .site-footer{
-    background:#0c0a08;
-    border-top:1px solid #1f1b16;
-    padding:22px 20px;
-    text-align:center;
-  }
-  .footer-text{
-    color:#b8a88a;
-    font-size:13px;
-    letter-spacing:2px;
-    opacity:1;
-  }
-  @media(max-width:600px){
-      .site-header{
-    background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);
-    border-bottom:1px solid #dbcdb0;
-    padding:32px 24px;
-  }
-  .header-inner{
-    max-width:960px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:24px;
-  }
-  .back-link{
+  .home-link{
+    position:absolute;
+    left:0;
+    top:8px;
     color:#5a4638;
     text-decoration:none;
-    font-size:20px;
+    font-size:18px;
     letter-spacing:2px;
-    font-weight:700;
-    flex-shrink:0;
     transition:opacity .2s;
   }
-  .back-link:hover{opacity:.65}
-  .title-group{
-    text-align:center;
-    flex:1;
-    min-width:0;
-  }
-  .site-title{
-    font-size:38px;
+  .home-link:hover{opacity:.7}
+  .title-block{text-align:center}
+  .page-title{
+    font-size:30px;
     font-weight:800;
     color:#2a1008;
     letter-spacing:6px;
     line-height:1.2;
   }
-  .site-subtitle{
-    font-size:17px;
+  .page-subtitle{
+    font-size:16px;
     color:#3e2212;
-    letter-spacing:3px;
-    font-weight:700;
-    margin-top:6px;
+    letter-spacing:2px;
+    margin-top:4px;
   }
-  .header-spacer{width:120px;flex-shrink:0}
-
-  .container{padding:26px 18px}
-    .header-inner{flex-direction:column;align-items:center;gap:12px}
+    .container{padding:26px 18px}
+    .header-inner{flex-direction:column;align-items:flex-start;gap:12px}
     .chapter-title{font-size:22px}
   }
 </style>
@@ -191,12 +76,11 @@
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a class="back-link" href="/QLand/">← 故事目錄</a>
-    <div class="title-group">
-      <div class="site-title">屈民天地</div>
-      
+    <a class="home-link" href="/QLand/">回首頁</a>
+    <div class="title-block">
+      <div class="page-title">屈民天地</div>
+      <div class="page-subtitle"></div>
     </div>
-    <div class="header-spacer"></div>
   </div>
 </header>
 
@@ -206,7 +90,7 @@
 </div>
 
 <footer class="site-footer">
-  <div class="footer-text">QLand — 繁體中文小說平台</div>
+  <div class="footer-text">小民天地 · Ordinary Lives</div>
 </footer>
 <script>
 const chapters = {
@@ -217,11 +101,6 @@ const chapters = {
   2: {
     title: "便利商店的對面",
     body: `<p>便利商店的燈光是這條巷子裏唯一不會睡的顏色。</p><p>小偉在對面停車場當夜班守衛，十四個月了。他的工作是看著夜班人把車停好，不讓人偷東西，偶爾幫喝醉的人找回手機。薪水不高，但他說很適合他。</p><p>「爲什麼？」朋友問。</p><p>「因爲晚上比較安靜。」小偉說，「而且我可以同時看書。」</p><p>他的守衛室只有一張桌子、一把折疊椅、一台老舊的熱水器，還有一盞別人不要的檯燈。燈光是黃的，他說黃光比較護眼。</p><p>每天晚上十點到清晨六點，他的生活幾乎是固定的：</p><p>十點半：泡一杯咖啡，坐下來讀書。</p><p>十一點半：巡一次停車場，和老闆的貓打招呼。</p><p>凌晨一點：上次廁所，順便看便利商店的貨架有没有新零食。</p><p>凌晨兩點：回去讀書，或者寫點東西。</p><p>便利商店的夜班是一個叫阿美的女生。她做了三年，說從來沒有看過同一張臉連續三天出現。</p><p>「你是例外。」她說。</p><p>小偉笑：「因爲我住在對面。」</p><p>阿美總會留一個熱便當給他。有時候是滷肉飯，有時候是咖哩，偶爾是前一晚賣剩下的關東煮。她說反正到最後都要丟，不如給看得見的人吃。</p><p>「你不怕我是壞人嗎？」小偉有一次問。</p><p>阿美拉下簾子，指了指外面馬路。</p><p>「壞人不會每天早上騎腳踏車來還你丟在桌上的原子筆。」</p><p>小偉楞了一下，才想起那是兩周前的事了。</p><p>那是巷口的故事。不是愛情，也沒有什麼戲劇性的轉折。只是兩個在深夜裏勉強醒著的人，剛好看見對方而已。</p><p>──</p><p>便利商店的燈每天早上六點關。</p><p>小偉這時會站起來，活動筋骨，把守衛室的椅子推回桌子底下。</p><p>阿美從玻璃門裏對他點點頭。他也點點頭。</p><p>然後他騎著腳踏車去早餐店買兩個饅頭，回家睡覺。</p><p>就這樣十四個月。</p><p>他說這樣很好。</p>`
-  }
-},
-  3: {
-    title: "早餐店的板凳",
-    body: `<p>早餐店在巷口轉角。老闆姓陳，大家都叫他陳伯。</p><p>陳伯五點整開門，五點十分油鍋熱，五點十五分第一批蛋餅出爐。四十年了，從沒遲到過。隔壁便利商店的阿雄說：「陳伯，你都不用鬧鐘的嗎？」</p><p>陳伯笑：「鬧鐘是給懶人用的。我每天四點半自然醒。」</p><p>阿雄不信，直到有一晚輪值加班到凌晨三點，路過早餐店，看見陳伯一個人坐在店裡剝蒜。</p><p>「怎麼這麽早？」阿雄敲敲玻璃門。</p><p>「蒜要現剝才香。」陳伯抬頭笑。</p><p>早餐店只有五張板凳。從陳伯開店那天就在，坐得發亮，油漆磨得 幾乎 露出木頭。</p><p>來的人都很固定：</p><p>- 七點：國小老師買兩個招牌飯糰</p><p>- 七點二十：工地師傅點三碗鹹豆漿</p><p>- 八點：阿銘 銀行員，永遠坐在最左邊那張</p><p>阿銘 坐最左邊那張不是因為喜歡，是因為他每天早上七點五十分到，那張板凳從來沒有被占。</p><p>有一天八點零五分，阿銘 來到早餐店，發現最左邊的板凳坐了別人。</p><p>是一個穿著高中校服的女孩子，低著頭看課本，腳邊放著書包，手裡捧著一杯熱豆漿。</p><p>阿銘 猶豫了一下，坐在了右邊第二張。</p><p>陳伯把蛋餅端出來，看了 阿銘 一眼，又看了看那個女孩子，沒有說話。</p><p>就這樣過了一個禮拜。那個女孩子每天都在 阿銘 來之前占了最左邊的板凳。</p><p>第八天，阿銘 提早了五分鐘到。他坐在了最左邊的板凳上。</p><p>女孩子來的時候，愣了一下，然後坐在了他旁邊。</p><p>從那天起，他們每天早上七點五十分一起出現在早餐店。陳伯的蛋餅還是五點十五分出爐，阿雄還是三點下班路過剝蒜。</p><p>有時候青春不是轟轟烈烈的愛情，而是兩個陌生人在早餐店，因為同一張板凳，開始了彼此的早晨。</p><p>──</p><p>阿銘 說，他後來才知道那個女孩子是對面中學三年級的學生。她每天七點四十五分出發，之所以坐那張板凳，是因為那張凳子距離油鍋最近，早上不會太冷。</p><p>「那你為什麽後來不提早？」陳伯問。</p><p>阿銘 笑：「因為我想看看，她會不會主動坐過來。」</p><p>陳伯點頭，然後順手 往鍋子里打了第二顆蛋。</p>`
   }
 };
 let currentChapter = 1;
