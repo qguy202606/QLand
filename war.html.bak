@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>戰馬 — QLand 戰爭系列</title>
-<style>  :root{
+<style>
+  :root{
     --bg:#0b0a10;
     --text:#e4d8c4;
     --text-dim:#a89a82;
@@ -32,11 +33,15 @@
     margin:0 auto;
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:center;
     gap:18px;
     position:relative;
+    padding-top:6px;
   }
   .home-link{
+    position:absolute;
+    left:0;
+    top:8px;
     color:#5a4638;
     text-decoration:none;
     font-size:18px;
@@ -45,93 +50,21 @@
   }
   .home-link:hover{opacity:.7}
   .title-block{text-align:center}
-  .site-title{
+  .page-title{
     font-size:30px;
     font-weight:800;
     color:#2a1008;
     letter-spacing:6px;
+    line-height:1.2;
   }
-  .site-subtitle{
-    font-size:15px;
+  .page-subtitle{
+    font-size:16px;
     color:#3e2212;
-    letter-spacing:3px;
-    font-weight:700;
+    letter-spacing:2px;
     margin-top:4px;
   }
-  .container{
-    max-width:760px;
-    margin:0 auto;
-    padding:44px 28px 32px;
-    flex:1;
-    width:100%;
-  }
-  .chapter-num{
-    font-size:19px;
-    color:#c8a878;
-    letter-spacing:4px;
-    margin-bottom:10px;
-    opacity:1;
-  }
-  .chapter-title{
-    font-size:30px;
-    font-weight:500;
-    color:#f1e4cc;
-    letter-spacing:3px;
-    margin-bottom:28px;
-    padding-bottom:14px;
-    border-bottom:1px dashed #2a2420;
-  }
-  .chapter-body p{
-    margin-bottom:18px;
-    font-size:19px;
-    text-align:justify;
-    text-indent:2em;
-    color:#efe3c8;
-    line-height:1.95;
-  }
-  .chapter-body p:last-child{margin-bottom:0}
-  .chapter-nav{
-    margin-top:44px;
-    padding-top:24px;
-    border-top:1px solid #2a2420;
-    display:flex;
-    justify-content:space-between;
-    gap:18px;
-  }
-  .chapter-nav a{
-    flex:1;
-    max-width:220px;
-    text-align:center;
-    padding:14px 16px;
-    background:#0c0a08;
-    border:1.5px solid #4a3c2f;
-    color:#ddd6c4;
-    text-decoration:none;
-    font-size:15px;
-    letter-spacing:4px;
-    transition:all .25s;
-  }
-  .chapter-nav a:hover{
-    border-color:#7a6d5a;
-    color:#fff;
-    background:#14110d;
-  }
-  .chapter-nav .disabled{opacity:.25;pointer-events:none;color:#777}
-  .site-footer{
-    background:#0c0a08;
-    border-top:1px solid #1f1b16;
-    padding:22px 20px;
-    text-align:center;
-  }
-  .footer-text{
-    color:#b8a88a;
-    font-size:13px;
-    letter-spacing:2px;
-    opacity:1;
-  }
-  @media(max-width:600px){
     .container{padding:26px 18px}
-    .header-inner{flex-direction:column;align-items:center;gap:12px}
+    .header-inner{flex-direction:column;align-items:flex-start;gap:12px}
     .chapter-title{font-size:22px}
   }
 </style>
@@ -141,8 +74,8 @@
   <div class="header-inner">
     <a class="home-link" href="/QLand/">回首頁</a>
     <div class="title-block">
-      <div class="site-title">戰馬</div>
-      <div class="site-subtitle">戰爭系列 · War Stories</div>
+      <div class="page-title">戰馬</div>
+      <div class="page-subtitle">戰爭系列 · War Stories</div>
     </div>
   </div>
 </header>
