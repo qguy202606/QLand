@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>QLand — 繁體中文小說平臺</title>
 <style>
-  :root{--bg:#0b0a10;--surface:#14110d;--surface2:#1b1824;--text:#e4d8c4;--text-dim:#b8a890;--accent:#d4a574;--accent-dim:#8b5e3c;--border:#2a2420;--gold:#c49a6c}
+  :root{--bg:#0b0a10;--surface:#14110d;--surface2:#1b1824;--text:#e4d8c4;--text-dim:#b8a890;--accent:#d4a574;--border:#2a2420}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--text);font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;line-height:1.9;min-height:100vh;display:flex;flex-direction:column}
@@ -79,27 +79,32 @@
 </header>
 
 <div class="container">
-<script>
-const series = [
-  {"path":"palace.html","title":"宮闈年鑑 · Empire Chronicle","desc":"宮鬥、算計、寵愛、生存。一個常在的後宮生存之路。","section":"宮闈系列"},
-  {"path":"war.html","title":"戰馬","desc":"老兵與馬的最後一程。它完成的任務，從來沒有人知道。","section":"戰爭系列"},
-  {"path":"joke-lily.html","title":"百合","desc":"御膳房裏最危險的菜，不是毒藥，是那道叫「百合」的飯。","section":"笑話系列"},
-  {"path":"joke-frog.html","title":"青蛙","desc":"嘲笑慢的人，最後總會聽見一句比慢更重的話。","section":"笑話系列"},
-  {"path":"qu-min-tian-di.html","title":"小民天地","desc":"市井小民的生活隨筆，酸甜苦辣，都是故事。","section":"生活隨筆"},
-  {"path":"memory-shape.html","title":"未寄出的明信片","desc":"車站前的咖啡店，等著一封不會送到的信。","section":"生活隨筆"}
-];
-const sections = [...new Set(series.map(s => s.section))];
-document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.container');
-  if (!container) return;
-  sections.forEach(sec => {
-    const row = document.createElement('div');
-    row.className = 'story-section';
-    row.innerHTML = '<div class="section-title">' + sec + '</div><div class="story-grid">' + series.filter(s => s.section === sec).map(s => '<a href="/QLand/' + s.path + '" class="story-card"><h2>' + s.title + '</h2><p>' + s.desc + '</p></a>').join('') + '</div>';
-    container.appendChild(row);
-  });
-});
-</script>
+  <div class="story-section">
+    <div class="section-title">宮闈系列</div>
+    <div class="story-grid">
+      <a href="/QLand/palace.html" class="story-card"><h2>宮闈年鑑 · Empire Chronicle</h2><p>宮鬥、算計、寵愛、生存。一個常在的後宮生存之路。</p></a>
+    </div>
+  </div>
+  <div class="story-section">
+    <div class="section-title">戰爭系列</div>
+    <div class="story-grid">
+      <a href="/QLand/war.html" class="story-card"><h2>戰馬</h2><p>老兵與馬的最後一程。它完成的任務，從來沒有人知道。</p></a>
+    </div>
+  </div>
+  <div class="story-section">
+    <div class="section-title">笑話系列</div>
+    <div class="story-grid">
+      <a href="/QLand/joke-lily.html" class="story-card"><h2>百合</h2><p>御膳房裏最危險的菜，不是毒藥，是那道叫「百合」的飯。</p></a>
+      <a href="/QLand/joke-frog.html" class="story-card"><h2>青蛙</h2><p>嘲笑慢的人，最後總會聽見一句比慢更重的話。</p></a>
+    </div>
+  </div>
+  <div class="story-section">
+    <div class="section-title">生活隨筆</div>
+    <div class="story-grid">
+      <a href="/QLand/qu-min-tian-di.html" class="story-card"><h2>小民天地</h2><p>市井小民的生活隨筆，酸甜苦辣，都是故事。</p></a>
+      <a href="/QLand/memory-shape.html" class="story-card"><h2>未寄出的明信片</h2><p>車站前的咖啡店，等著一封不會送到的信。</p></a>
+    </div>
+  </div>
 </div>
 
 <footer class="site-footer">

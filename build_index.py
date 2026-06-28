@@ -1,0 +1,122 @@
+from pathlib import Path
+
+series = [
+    {"path": "palace.html", "title": "宮闈年鑑 · Empire Chronicle", "desc": "宮鬥、算計、寵愛、生存。一個常在的後宮生存之路。", "section": "宮闈系列"},
+    {"path": "war.html", "title": "戰馬", "desc": "老兵與馬的最後一程。它完成的任務，從來沒有人知道。", "section": "戰爭系列"},
+    {"path": "joke-lily.html", "title": "百合", "desc": "御膳房裏最危險的菜，不是毒藥，是那道叫「百合」的飯。", "section": "笑話系列"},
+    {"path": "joke-frog.html", "title": "青蛙", "desc": "嘲笑慢的人，最後總會聽見一句比慢更重的話。", "section": "笑話系列"},
+    {"path": "qu-min-tian-di.html", "title": "小民天地", "desc": "市井小民的生活隨筆，酸甜苦辣，都是故事。", "section": "生活隨筆"},
+    {"path": "memory-shape.html", "title": "未寄出的明信片", "desc": "車站前的咖啡店，等著一封不會送到的信。", "section": "Memory Shape"},
+]
+
+lines = []
+lines.append("<!DOCTYPE html>")
+lines.append('<html lang="zh-Hant">')
+lines.append("<head>")
+lines.append('<meta charset="UTF-8">')
+lines.append('<meta name="viewport" content="width=device-width, initial-scale=1.0">')
+lines.append("<title>QLand — 繁體中文小說平臺</title>")
+lines.append("<style>")
+lines.append("  :root{--bg:#0b0a10;--surface:#14110d;--surface2:#1b1824;--text:#e4d8c4;--text-dim:#b8a890;--accent:#d4a574;--border:#2a2420;--gold:#c49a6c}")
+lines.append("  *{box-sizing:border-box;margin:0;padding:0}")
+lines.append("  html{scroll-behavior:smooth}")
+lines.append('  body{background:var(--bg);color:var(--text);font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;line-height:1.9;min-height:100vh;display:flex;flex-direction:column}')
+lines.append("  .site-header{background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);border-bottom:1px solid #dbcdb0;padding:32px 28px}")
+lines.append("  .header-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px}")
+lines.append("  .brand{display:flex;align-items:center;gap:18px;flex:1 1 auto;min-width:0}")
+lines.append("  .title-block{text-align:left}")
+lines.append("  .site-title{font-size:46px;font-weight:800;color:#2a1008;letter-spacing:7px}")
+lines.append("  .site-subtitle{font-size:24px;color:#3e2212;letter-spacing:3px;font-weight:700;margin-top:4px}")
+lines.append("  .site-tagline{font-size:19px;color:#3e2212;letter-spacing:2px;margin-top:6px;font-weight:500}")
+lines.append("  .site-desc{font-size:17px;color:#2f1b10;letter-spacing:1.5px;margin-top:6px;font-weight:500}")
+lines.append("  .header-right{display:flex;flex-direction:column;align-items:center;gap:6px;flex-shrink:0}")
+lines.append("  .logo-circle{width:72px;height:72px;border-radius:50%;border:1.5px solid #b08d55;background:#f3ecd8;display:flex;align-items:center;justify-content:center}")
+lines.append("  .logo-text{font-size:12px;letter-spacing:2px;color:#8c6b3e}")
+lines.append("  .container{max-width:960px;margin:0 auto;padding:48px 28px 36px;flex:1;width:100%}")
+lines.append("  .story-section{margin-bottom:36px}")
+lines.append("  .section-title{font-size:20px;font-weight:700;color:#f1e4cc;letter-spacing:4px;margin-bottom:20px;padding-bottom:10px;border-bottom:1px dashed var(--border)}")
+lines.append("  .story-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:18px}")
+lines.append("  .story-card{display:block;padding:28px 28px;margin-bottom:14px;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text);text-decoration:none;transition:all .25s;position:relative;overflow:hidden}")
+lines.append("  .story-card::before{content:\"\";position:absolute;top:0;left:0;width:5px;height:100%;background:var(--accent);opacity:.45;transition:opacity .25s}")
+lines.append("  .story-card:hover{border-color:#5a4a38;background:var(--surface2);color:#fff;transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.45)}")
+lines.append("  .story-card:hover::before{opacity:1}")
+lines.append("  .story-card h2{font-size:24px;font-weight:700;color:#d4a574;letter-spacing:2px;margin-bottom:10px}")
+lines.append("  .story-card p{font-size:18px;color:var(--text-dim);line-height:1.7}")
+lines.append("  .site-footer{background:#0c0a08;border-top:1px solid #1f1b16;padding:22px 20px;text-align:center;margin-top:40px}")
+lines.append("  .site-footer::before{content:\"\";display:block;width:34px;height:1px;background:#6b5540;margin:0 auto 14px}")
+lines.append("  .footer-text{font-size:14px;color:#a89b82;letter-spacing:5px}")
+lines.append("  @media(max-width:640px){.container{padding:30px 18px}.header-inner{flex-direction:column;align-items:flex-start}.header-right{align-self:flex-end}.site-title{font-size:30px}.site-subtitle{font-size:18px}.story-grid{grid-template-columns:1fr}}")
+lines.append("</style>")
+lines.append("</head>")
+lines.append("<body>")
+lines.append('<header class="site-header">')
+lines.append('  <div class="header-inner">')
+lines.append('    <div class="brand">')
+lines.append('      <div class="brand-icon">')
+lines.append('        <svg width="56" height="56" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">')
+lines.append('          <rect x="16" y="34" width="48" height="28" rx="2" fill="#6e4fa8"/>')
+lines.append('          <rect x="24" y="20" width="36" height="28" rx="2" fill="#6e4fa8"/>')
+lines.append('          <polygon points="28,20 34,3 40,20" fill="#c03570"/>')
+lines.append('          <polygon points="36,20 40,0 44,20" fill="#c03570"/>')
+lines.append('          <polygon points="42,20 48,3 54,20" fill="#c03570"/>')
+lines.append('          <rect x="32" y="48" width="16" height="14" rx="2" fill="#f3e9d2"/>')
+lines.append('          <path d="M32 48 L40 41 L48 48 Z" fill="#f3e9d2"/>')
+lines.append('          <rect x="24" y="52" width="10" height="10" rx="1" fill="#e6dcc4"/>')
+lines.append('          <rect x="50" y="52" width="10" height="10" rx="1" fill="#e6dcc4"/>')
+lines.append('        </svg>')
+lines.append('      </div>')
+lines.append('      <div class="title-block">')
+lines.append('        <h1 class="site-title">QLand</h1>')
+lines.append('        <p class="site-subtitle">繁體中文小說平臺</p>')
+lines.append('        <p class="site-tagline">宮闈、戰爭、人間——系列故事集</p>')
+lines.append('        <p class="site-desc">以章節形式連載，專注智鬥與人情。</p>')
+lines.append('      </div>')
+lines.append('    </div>')
+lines.append('    <div class="header-right">')
+lines.append('      <div class="logo-circle">')
+lines.append('        <svg width="52" height="52" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">')
+lines.append('          <rect x="12" y="28" width="40" height="24" rx="2" fill="#6e4fa8"/>')
+lines.append('          <rect x="18" y="18" width="28" height="22" rx="2" fill="#6e4fa8"/>')
+lines.append('          <polygon points="22,18 26,5 30,18" fill="#c03570"/>')
+lines.append('          <polygon points="30,18 34,2 38,18" fill="#c03570"/>')
+lines.append('          <polygon points="36,18 40,5 44,18" fill="#c03570"/>')
+lines.append('          <rect x="27" y="40" width="10" height="12" rx="1" fill="#f3e9d2"/>')
+lines.append('          <rect x="20" y="44" width="8" height="8" rx="1" fill="#e6dcc4"/>')
+lines.append('          <rect x="36" y="44" width="8" height="8" rx="1" fill="#e6dcc4"/>')
+lines.append('        </svg>')
+lines.append('      </div>')
+lines.append('      <div class="logo-text">KING</div>')
+lines.append('    </div>')
+lines.append('  </div>')
+lines.append('</header>')
+lines.append('')
+lines.append('<div class="container">')
+
+order = []
+seen = set()
+for s in series:
+    if s["section"] not in seen:
+        order.append(s["section"])
+        seen.add(s["section"])
+
+for sec in order:
+    lines.append('  <div class="story-section">')
+    lines.append('    <div class="section-title">' + sec + '</div>')
+    lines.append('    <div class="story-grid">')
+    for s in series:
+        if s["section"] == sec:
+            card = '<a href="/QLand/' + s["path"] + '" class="story-card"><h2>' + s["title"] + '</h2><p>' + s["desc"] + '</p></a>'
+            lines.append('      ' + card)
+    lines.append('    </div>')
+    lines.append('  </div>')
+
+lines.append('</div>')
+lines.append('')
+lines.append('<footer class="site-footer">')
+lines.append('  <div class="footer-text">QLand — 繁體中文小說平台</div>')
+lines.append('</footer>')
+lines.append('</body>')
+lines.append('</html>')
+
+Path("index.html").write_text("\n".join(lines), encoding="utf-8")
+print("OK index", len("\n".join(lines)), "bytes")
