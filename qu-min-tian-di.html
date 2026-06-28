@@ -5,189 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>小民天地 — QLand</title>
 <style>
-  :root{
-    --bg:#0b0a10;
-    --text:#e4d8c4;
-    --text-dim:#a89a82;
-    --accent:#d4a574;
-    --border:#2a2420;
-  }
+  :root{--bg:#0b0a10;--text:#e4d8c4;--text-dim:#a89a82;--accent:#d4a574;--border:#2a2420}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;
-    line-height:1.9;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-  }
-  .site-header{
-    background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);
-    border-bottom:1px solid #dbcdb0;
-    padding:32px 24px;
-  }
-  .header-inner{
-    max-width:960px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:24px;
-  }
-  .back-link{
-    color:#5a4638;
-    text-decoration:none;
-    font-size:20px;
-    letter-spacing:2px;
-    font-weight:700;
-    flex-shrink:0;
-    transition:opacity .2s;
-  }
+  body{background:var(--bg);color:var(--text);font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;line-height:1.9;min-height:100vh;display:flex;flex-direction:column}
+  .site-header{background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);border-bottom:1px solid #dbcdb0;padding:32px 24px}
+  .header-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .back-link{color:#5a4638;text-decoration:none;font-size:20px;letter-spacing:2px;font-weight:700;flex-shrink:0;transition:opacity .2s}
   .back-link:hover{opacity:.65}
-  .title-group{
-    text-align:center;
-    flex:1;
-    min-width:0;
-  }
-  .site-title{
-    font-size:38px;
-    font-weight:800;
-    color:#2a1008;
-    letter-spacing:6px;
-    line-height:1.2;
-  }
-  .site-subtitle{
-    font-size:17px;
-    color:#3e2212;
-    letter-spacing:3px;
-    font-weight:700;
-    margin-top:6px;
-  }
+  .title-group{text-align:center;flex:1;min-width:0}
+  .site-title{font-size:38px;font-weight:800;color:#2a1008;letter-spacing:6px;line-height:1.2}
+  .site-subtitle{font-size:17px;color:#3e2212;letter-spacing:3px;font-weight:700;margin-top:6px}
   .header-spacer{width:120px;flex-shrink:0}
-
-  .container{
-    max-width:760px;
-    margin:0 auto;
-    padding:44px 28px 32px;
-    flex:1;
-    width:100%;
-  }
-  .chapter-num{
-    font-size:19px;
-    color:#c8a878;
-    letter-spacing:4px;
-    margin-bottom:10px;
-    opacity:1;
-  }
-  .chapter-title{
-    font-size:30px;
-    font-weight:500;
-    color:#f1e4cc;
-    letter-spacing:3px;
-    margin-bottom:28px;
-    padding-bottom:14px;
-    border-bottom:1px dashed #2a2420;
-  }
-  .chapter-body p{
-    margin-bottom:18px;
-    font-size:19px;
-    text-align:justify;
-    text-indent:2em;
-    color:#efe3c8;
-    line-height:1.95;
-  }
+  .container{max-width:760px;margin:0 auto;padding:44px 28px 32px;flex:1;width:100%}
+  .chapter-num{font-size:19px;color:#c8a878;letter-spacing:4px;margin-bottom:10px;opacity:1}
+  .chapter-title{font-size:30px;font-weight:500;color:#f1e4cc;letter-spacing:3px;margin-bottom:28px;padding-bottom:14px;border-bottom:1px dashed #2a2420}
+  .chapter-body p{margin-bottom:18px;font-size:19px;text-align:justify;text-indent:2em;color:#efe3c8;line-height:1.95}
   .chapter-body p:first-child{text-indent:0}
   .chapter-body p:last-child{margin-bottom:0}
-  .chapter-nav{
-    margin-top:44px;
-    padding-top:24px;
-    border-top:1px solid #2a2420;
-    display:flex;
-    justify-content:space-between;
-    gap:18px;
-  }
-  .chapter-nav a{
-    flex:1;
-    max-width:220px;
-    text-align:center;
-    padding:14px 16px;
-    background:#0c0a08;
-    border:1.5px solid #4a3c2f;
-    color:#ddd6c4;
-    text-decoration:none;
-    font-size:15px;
-    letter-spacing:4px;
-    transition:all .25s;
-  }
-  .chapter-nav a:hover{
-    border-color:#7a6d5a;
-    color:#fff;
-    background:#14110d;
-  }
+  .chapter-nav{margin-top:44px;padding-top:24px;border-top:1px solid #2a2420;display:flex;justify-content:space-between;gap:18px}
+  .chapter-nav a{flex:1;max-width:220px;text-align:center;padding:14px 16px;background:#0c0a08;border:1.5px solid #4a3c2f;color:#ddd6c4;text-decoration:none;font-size:15px;letter-spacing:4px;transition:all .25s}
+  .chapter-nav a:hover{border-color:#7a6d5a;color:#fff;background:#14110d}
   .chapter-nav .disabled{opacity:.25;pointer-events:none;color:#777}
-  .site-footer{
-    background:#0c0a08;
-    border-top:1px solid #1f1b16;
-    padding:22px 20px;
-    text-align:center;
-  }
-  .footer-text{
-    color:#b8a88a;
-    font-size:13px;
-    letter-spacing:2px;
-    opacity:1;
-  }
-  @media(max-width:600px){
-    .site-header{
-      background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);
-      border-bottom:1px solid #dbcdb0;
-      padding:32px 24px;
-    }
-    .header-inner{
-      max-width:960px;
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
-    }
-    .back-link{
-      color:#5a4638;
-      text-decoration:none;
-      font-size:20px;
-      letter-spacing:2px;
-      font-weight:700;
-      flex-shrink:0;
-      transition:opacity .2s;
-    }
-    .back-link:hover{opacity:.65}
-    .title-group{
-      text-align:center;
-      flex:1;
-      min-width:0;
-    }
-    .site-title{
-      font-size:38px;
-      font-weight:800;
-      color:#2a1008;
-      letter-spacing:6px;
-      line-height:1.2;
-    }
-    .site-subtitle{
-      font-size:17px;
-      color:#3e2212;
-      letter-spacing:3px;
-      font-weight:700;
-      margin-top:6px;
-    }
-    .header-spacer{width:120px;flex-shrink:0}
-
-    .container{padding:26px 18px}
-      .header-inner{flex-direction:column;align-items:center;gap:12px}
-      .chapter-title{font-size:22px}
-  }
+  .site-footer{background:#0c0a08;border-top:1px solid #1f1b16;padding:22px 20px;text-align:center}
+  .footer-text{color:#b8a88a;font-size:13px;letter-spacing:2px;opacity:1}
+  @media(max-width:600px){.site-header{background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);border-bottom:1px solid #dbcdb0;padding:32px 24px}.header-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}.back-link{color:#5a4638;text-decoration:none;font-size:20px;letter-spacing:2px;font-weight:700;flex-shrink:0;transition:opacity .2s}.back-link:hover{opacity:.65}.title-group{text-align:center;flex:1;min-width:0}.site-title{font-size:38px;font-weight:800;color:#2a1008;letter-spacing:6px;line-height:1.2}.site-subtitle{font-size:17px;color:#3e2212;letter-spacing:3px;font-weight:700;margin-top:6px}.header-spacer{width:120px;flex-shrink:0}.container{padding:26px 18px}.header-inner{flex-direction:column;align-items:center;gap:12px}.chapter-title{font-size:22px}}
 </style>
 </head>
 <body>
@@ -201,12 +43,10 @@
     <div class="header-spacer"></div>
   </div>
 </header>
-
 <div class="container">
   <div id="chapterContent"></div>
   <div class="chapter-nav" id="chapterNav"></div>
 </div>
-
 <footer class="site-footer">
   <div class="footer-text">QLand — 繁體中文小說平台</div>
 </footer>
@@ -275,6 +115,10 @@ const chapters = {
   16: {
     title: "夕陽市場",
     body: `<p>ch15 的畫展之後，夜市的人越來越多。</p><p></p><p>不是因為畫而來的，而是因為一個傳聞：這裡賣的不只是水果，還有一種「被挑中的感覺」。</p><p></p><p>阿明每天依舊下午五點半開攤。他還是像以前一樣挑選最好的芭樂、芒果和鳳梨。但現在他會多問客人一句：「今天想找甜的，還是酸的？」</p><p></p><p>媽媽笑著說：「你變得很會說話。」</p><p></p><p>阿明笑笑。他知道不是自己變了，而是整個夜市都變了。</p><p></p><p>某天傍晚，夕陽把整個市場染成金黃色。阿明抬頭看見陳伯柱著拐杖，一步一步朝這裡走來。年輕人跟在後面，手裡拿著一把折疊椅。</p><p></p><p>「今天不輪班了？」阿明問。</p><p></p><p>陳伯點點頭：「今天我自己來。」</p><p></p><p>他站在攤子前，仔細看了很久。然後指了指最大的那顆芭樂：「就這個。」</p><p></p><p>年輕人付了錢。陳伯接過袋子，從口袋裡掏出十塊錢，放在桌子上。</p><p></p><p>「今天的，由我來選。」陳伯說。</p><p></p><p>阿明點點頭。</p><p></p><p>他知道這句話的意義。它代表陳伯回來了，代表夜市恢復了從前的節奏，代表選那三顆芭樂的傳統，又回到了原點。</p><p></p><p>那天晚上，阿明把這件事寫在畫本的最後一頁。「夕陽市場」的標題下面，畫了三個身影：媽媽、陳伯、他自己。</p><p></p><p>林姐看了之後說：「這才是真正的市場——不是因為人多，而是因為有故事的人，都在。」</p><p></p><p>阿明點點頭。</p><p></p><p>從那天起，夜市正式恢復了「每星期三，由陳伯挑選」的傳統。只是現在，阿明會在挑選之前，先問陳伯今天想要什麼口感的。</p><p></p><p>有時候甜的，有時候酸的，有時候只是想懷念一下。</p><p></p><p>「市場就像人生，」陳伯說，「不一定每天都選甜的。但你知道，只要願意選，就一定會有好结果。」</p><p></p><p>夕陽再次降臨時，阿明把最後一幅畫掛在攤子旁邊。畫的題目是：「夕陽市場」。</p><p></p><p>他知道，這不是結束。</p><p></p><p>這只是又一個夏天，又一個開始。</p><p></p><p>夜市的路燈還亮著。音樂還在歌。芭樂還在。</p><p></p><p>而故事，永遠繼續。</p>`
+  },
+  17: {
+    title: "回頭客",
+    body: `<p>陳伯恢復之後，夜市多了一個新的約定。</p><p></p><p>每逢星期三，他依舊會來，但他不再只買三顆芭樂。他開始跟攤子旁邊的客人聊天，問他們今天過得怎麼樣，聽他們說說自己的故事。</p><p></p><p>「你老闆娘今天的芭樂特別甜。」一個常客說。</p><p></p><p>陳伯點點頭：「因為阿明今天特別用心挑。」</p><p></p><p>那人轉頭對阿明笑了笑：「年輕人，謝謝你。」</p><p></p><p>阿明有些不好意思。他漸漸發現，夜市不再只是賣水果的地方，它成了一個讓陌生人卸下武裝的角落。</p><p></p><p>某天晚上，一個外國遊客站在攤子前，指著芭樂，用生硬的中文問：「這個……是什麼？」</p><p></p><p>阿明愣了一下，隨即笑了。他挑了一顆最甜的，切開來請對方嚐。</p><p></p><p>遊客咬了一口，眼睛頓時亮了。他豎起大拇指，說：「好吃！」</p><p></p><p>接下來的那個月，夜市多了一些新面孔。有遊客、有學生、有附近上班族。他們不是來買芭樂，而是來聽陳伯的故事，和阿明聊聊天。</p><p></p><p>「這個夜市有一種魔力，」一個大學生說，「讓人想多待一會兒。」</p><p></p><p>阿明想起 ch1 時的自己，那個只敢站在攤子後面看別人笑臉的小男孩。他沒想到，有一天自己也會成為別人的風景。</p><p></p><p>媽媽說：「你看，夜市真的活了。」</p><p></p><p>阿明點點頭。</p><p></p><p>他知道，這不是因為他或陳伯做了什麼大事。只是因為，他們願意在這裡，對每一個路過的人，多說一句話，多分一點甜。</p><p></p><p>夜市的路燈照亮的不只是水果攤。</p><p></p><p>它照亮的是每個願意停下來、願意被記住的灵魂。</p><p></p><p>而這，就是最好的傳承。</p>`
   }
 };
 let currentChapter = 1;
@@ -282,22 +126,12 @@ function renderChapter(n){
   const ch = chapters[n];
   if (!ch) return;
   currentChapter = n;
-  document.getElementById('chapterContent').innerHTML = `<div class="chapter-num">第${['','一','二','三','四','五','六','七','八','九','十','十一','十二','十三','十四','十五','十六'][n]}章</div><h1 class="chapter-title">${ch.title}</h1><div class="chapter-body">${ch.body}</div>`;
+  document.getElementById('chapterContent').innerHTML = `<div class="chapter-num">第${["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二", "十三", "十四", "十五", "十六", "十七"]}[n]}章</div><h1 class="chapter-title">${ch.title}</h1><div class="chapter-body">${ch.body}</div>`;
   const prev = n > 1 ? `<a href="#" data-ch="${n-1}">← 上一章</a>` : '';
   const next = n < Object.keys(chapters).length ? `<a href="#" data-ch="${n+1}">下一章 →</a>` : '';
-  const navHtml = prev + next;
-  document.getElementById('chapterNav').innerHTML = navHtml || '<span></span>';
-  const links = document.querySelectorAll('#chapterNav a[data-ch]');
-  if (links.length) bindNav();
+  document.getElementById('chapterNav').innerHTML = prev + next || '<span></span>';
+  document.querySelectorAll('#chapterNav a[data-ch]').forEach(a=>a.onclick=e=>{e.preventDefault();renderChapter(+a.dataset.ch)});
   window.scrollTo({top:0, behavior:'smooth'});
-}
-function bindNav(){
-  document.querySelectorAll('#chapterNav a[data-ch]').forEach(a=>{
-    a.addEventListener('click', e=>{
-      e.preventDefault();
-      renderChapter(parseInt(a.dataset.ch));
-    });
-  });
 }
 renderChapter(1);
 </script>
