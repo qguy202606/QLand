@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lost & Found Ch1 — QLand</title>
+<style>
+  :root{--bg:#0b0a10;--text:#e4d8c4;--border:#2a2420;--card-bg:#14110d;--accent:#d4a574}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;line-height:1.9;min-height:100vh;display:flex;flex-direction:column}
+  .site-header{background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);border-bottom:1px solid #dbcdb0;padding:32px 24px}
+  .header-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .back-link{color:#5a4638;text-decoration:none;font-size:20px;letter-spacing:2px;font-weight:700;flex-shrink:0;transition:opacity .2s}
+  .back-link:hover{opacity:.65}
+  .title-group{text-align:center;flex:1;min-width:0}
+  .site-title{font-size:38px;font-weight:800;color:#2a1008;letter-spacing:6px;line-height:1.2}
+  .site-subtitle{font-size:17px;color:#3e2212;letter-spacing:3px;font-weight:700;margin-top:6px}
+  .header-spacer{width:120px;flex-shrink:0}
+  .container{max-width:760px;margin:0 auto;padding:44px 28px 32px;flex:1;width:100%}
+  .chapter-num{font-size:19px;color:#c8a878;letter-spacing:4px;margin-bottom:10px;opacity:1}
+  .chapter-title{font-size:30px;font-weight:500;color:#f1e4cc;letter-spacing:3px;margin-bottom:28px;padding-bottom:14px;border-bottom:1px dashed #2a2420}
+  .chapter-body p{margin-bottom:18px;font-size:19px;text-align:justify;text-indent:2em;color:#efe3c8;line-height:1.95}
+  .chapter-body p:first-child{text-indent:0}
+  .chapter-body p:last-child{margin-bottom:0}
+  .chapter-nav{margin-top:44px;padding-top:24px;border-top:1px solid #2a2420;display:flex;justify-content:space-between;gap:18px}
+  .chapter-nav a{flex:1;max-width:220px;text-align:center;padding:14px 16px;background:#0c0a08;border:1.5px solid #4a3c2f;color:#ddd6c4;text-decoration:none;font-size:15px;letter-spacing:4px;transition:all .25s}
+  .chapter-nav a:hover{border-color:#7a6d5a;color:#fff;background:#14110d}
+  .chapter-nav .disabled{opacity:.25;pointer-events:none;color:#777}
+  .site-footer{background:#0c0a08;border-top:1px solid #1f1b16;padding:22px 20px;text-align:center}
+  .footer-text{color:#b8a88a;font-size:13px;letter-spacing:2px;opacity:1}
+  @media(max-width:600px){.container{padding:26px 18px}.chapter-title{font-size:22px}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="back-link" href="/QLand/lost-and-found.html">← 系列目錄</a>
+    <div class="title-group">
+      <div class="site-title">Lost & Found</div>
+      <div class="site-subtitle">Chapter 1</div>
+    </div>
+    <div class="header-spacer"></div>
+  </div>
+</header>
+<div class="container">
+  <div id="chapterContent"></div>
+  <div class="chapter-nav" id="chapterNav"></div>
+</div>
+<footer class="site-footer">
+  <div class="footer-text">QLand — 繁體中文小說平台</div>
+</footer>
+<script>
+(function(){
+  var body = [
+    "There is a shop at the corner of Maple and 5th that does not have a name on the door. The window is dusty. The bell above the door jingles softly, though no one ever seems to pass by.",
+    "Elara found it on a rainy Thursday evening. She was not looking for it. She was only trying to stay dry.",
+    "Inside, the shop smelled of old books and wood polish. The shelves were crowded with ordinary things — teacups, pocket watches, faded photographs, letters with no envelopes. Everything looked as if it had been waiting for someone to notice it again.",
+    "Behind the counter sat an old man. He wore a cardigan with a coffee stain on the left sleeve. He looked up when Elara entered. His eyes were calm, almost as if he had been expecting her.",
+    "He smiled. Most people do.",
+    "Elara wandered the aisles. She touched the spines of books that had no titles. She opened a music box that played no tune she recognized. On a middle shelf she found a small wooden bird, carved with rough but careful hands.",
+    "How much? she asked.",
+    "The old man glanced at the bird, then at her. He did not answer immediately. The bell jingled once, twice, then fell silent.",
+    "That one is not for sale. But if you need it... you may take it. free.",
+    "Elara stared at him. Why would you give it away?",
+    "Because the bird was left here by someone who no longer needed it. And you are the first person in three years to notice it.",
+    "She took the bird home. That night, she dreamed of a boy with paint on his fingers, carving while an older man watched. The boy was laughing. The older man was teaching. When she woke, the bird was on her nightstand, and she understood.",
+    "It was a memory. Not hers. But she had been carrying it somehow.",
+    "She returned the next week. The old man nodded as if he had expected her.",
+    "Some things we lose are not ours to begin with, he said.",
+    "She visited again the week after that. She brought tea. They sat on opposite sides of the counter and watched the rain trace paths down the dusty window.",
+    "Does it ever close? Elara asked.",
+    "Only when everyone who needs to find something has found it. He shook his head.",
+    "A month later, a teenager came in, soaking wet. He searched every shelf wildly. I lost something, he said. I do not know what, but I have to find it.",
+    "The old man pointed to the middle shelf where the bird had rested. Look again. Sometimes what we lose is not what we think it is.",
+    "The teenager reached out and picked up a red marble, swirling with cream. I forgot this, he whispered. I forgot this existed.",
+    "And that was when the Shop That Returns What You Lost revealed its rule. It did not return objects. It returned moments. It returned parts of people who had simply forgotten to carry them.",
+    "Not all returns were gentle. Some opened doors that had been locked for years. Some broke hearts before they healed them.",
+    "But Elara understood now. The shop was not a store. It was a mirror. And the old man behind the counter was not a shopkeeper. He was the Keeper.",
+    "And she would be back."
+  ];
+  var elContent = document.getElementById('chapterContent');
+  var elNav = document.getElementById('chapterNav');
+  var html = '<div class="chapter-num">Chapter 1</div><h1 class="chapter-title">The Shop That Returns What You Lost</h1><div class="chapter-body">' + body.map(function(p){return '<p>' + p + '</p>';}).join('') + '</div>';
+  elContent.innerHTML = html;
+  elNav.innerHTML = '<span class="disabled">← Previous</span><a href="/QLand/lost-and-found.html">系列目錄</a>';
+  window.scrollTo({top:0, behavior:'smooth'});
+})();
+</script>
+</body>
+</html>
