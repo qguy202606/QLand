@@ -5,195 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>QLand — 繁體中文小說平臺</title>
 <style>
-  :root{
-    --bg:#0b0a10;
-    --surface:#14110d;
-    --surface2:#1b1824;
-    --text:#e4d8c4;
-    --text-dim:#b8a890;
-    --accent:#d4a574;
-    --accent-dim:#8b5e3c;
-    --border:#2a2420;
-    --gold:#c49a6c;
-  }
+  :root{--bg:#0b0a10;--surface:#14110d;--surface2:#1b1824;--text:#e4d8c4;--text-dim:#b8a890;--accent:#d4a574;--accent-dim:#8b5e3c;--border:#2a2420;--gold:#c49a6c}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;
-    line-height:1.9;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-  }
-  .site-header{
-    background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);
-    border-bottom:1px solid #dbcdb0;
-    padding:32px 28px;
-  }
-  .header-inner{
-    max-width:960px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:18px;
-  }
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    flex:1 1 auto;
-    min-width:0;
-  }
+  body{background:var(--bg);color:var(--text);font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;line-height:1.9;min-height:100vh;display:flex;flex-direction:column}
+  .site-header{background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);border-bottom:1px solid #dbcdb0;padding:32px 28px}
+  .header-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+  .brand{display:flex;align-items:center;gap:18px;flex:1 1 auto;min-width:0}
   .title-block{text-align:left}
-  .site-title{
-    font-size:46px;
-    font-weight:800;
-    color:#2a1008;
-    letter-spacing:7px;
-  }
-  .site-subtitle{
-    font-size:24px;
-    color:#3e2212;
-    letter-spacing:3px;
-    opacity:1;
-    font-weight:700;
-    margin-top:4px;
-  }
-  .site-tagline{
-    font-size:19px;
-    color:#3e2212;
-    letter-spacing:2px;
-    margin-top:6px;
-    opacity:1;
-    font-weight:500;
-  }
-  .site-desc{
-    font-size:17px;
-    color:#2f1b10;
-    letter-spacing:1.5px;
-    margin-top:6px;
-    opacity:1;
-    font-weight:500;
-  }
-  .header-right{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:6px;
-    flex-shrink:0;
-  }
-  .logo-circle{
-    width:72px;
-    height:72px;
-    border-radius:50%;
-    border:1.5px solid #b08d55;
-    background:#f3ecd8;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .logo-text{
-    font-size:12px;
-    letter-spacing:2px;
-    color:#8c6b3e;
-  }
-  .container{
-    max-width:960px;
-    margin:0 auto;
-    padding:48px 28px 36px;
-    flex:1;
-    width:100%;
-  }
-  .story-section{
-    margin-bottom:36px;
-  }
-  .section-title{
-    font-size:20px;
-    font-weight:700;
-    color:#f1e4cc;
-    letter-spacing:4px;
-    margin-bottom:20px;
-    padding-bottom:10px;
-    border-bottom:1px dashed var(--border);
-    text-transform:uppercase;
-  }
-  .story-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
-    gap:18px;
-  .story-card{
-    display:block;
-    padding:28px 28px;
-    margin-bottom:14px;
-    background:var(--surface);
-    border:1px solid var(--border);
-    border-radius:12px;
-    color:var(--text);
-    text-decoration:none;
-    transition:all .25s;
-    position:relative;
-    overflow:hidden;
-  }
-  .story-card::before{
-    content:"";
-    position:absolute;
-    top:0;left:0;width:5px;height:100%;
-    background:var(--accent);
-    opacity:.45;
-    transition:opacity .25s;
-  }
-  .story-card:hover{
-    border-color:#5a4a38;
-    background:var(--surface2);
-    color:#fff;
-    transform:translateY(-3px);
-    box-shadow:0 10px 28px rgba(0,0,0,.45);
-  }
+  .site-title{font-size:46px;font-weight:800;color:#2a1008;letter-spacing:7px}
+  .site-subtitle{font-size:24px;color:#3e2212;letter-spacing:3px;font-weight:700;margin-top:4px}
+  .site-tagline{font-size:19px;color:#3e2212;letter-spacing:2px;margin-top:6px;font-weight:500}
+  .site-desc{font-size:17px;color:#2f1b10;letter-spacing:1.5px;margin-top:6px;font-weight:500}
+  .header-right{display:flex;flex-direction:column;align-items:center;gap:6px;flex-shrink:0}
+  .logo-circle{width:72px;height:72px;border-radius:50%;border:1.5px solid #b08d55;background:#f3ecd8;display:flex;align-items:center;justify-content:center}
+  .logo-text{font-size:12px;letter-spacing:2px;color:#8c6b3e}
+  .container{max-width:960px;margin:0 auto;padding:48px 28px 36px;flex:1;width:100%}
+  .story-section{margin-bottom:36px}
+  .section-title{font-size:20px;font-weight:700;color:#f1e4cc;letter-spacing:4px;margin-bottom:20px;padding-bottom:10px;border-bottom:1px dashed var(--border)}
+  .story-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:18px}
+  .story-card{display:block;padding:28px 28px;margin-bottom:14px;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text);text-decoration:none;transition:all .25s;position:relative;overflow:hidden}
+  .story-card::before{content:"";position:absolute;top:0;left:0;width:5px;height:100%;background:var(--accent);opacity:.45;transition:opacity .25s}
+  .story-card:hover{border-color:#5a4a38;background:var(--surface2);color:#fff;transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.45)}
   .story-card:hover::before{opacity:1}
-  .story-card h2{
-    font-size:24px;
-    font-weight:700;
-    color:#d4a574;
-    letter-spacing:2px;
-    margin-bottom:10px;
-  }
-  .story-card p{
-    font-size:18px;
-    color:var(--text-dim);
-    line-height:1.7;
-  }
-  .site-footer{
-    background:#0c0a08;
-    border-top:1px solid #1f1b16;
-    padding:22px 20px;
-    text-align:center;
-    margin-top:40px;
-  }
-  .site-footer::before{
-    content:"";
-    display:block;
-    width:34px;
-    height:1px;
-    background:#6b5540;
-    margin:0 auto 14px;
-  }
-  .footer-text{
-    font-size:14px;
-    color:#a89b82;
-    letter-spacing:5px;
-    opacity:1;
-  }
-  @media(max-width:640px){
-    .container{padding:30px 18px}
-    .header-inner{flex-direction:column;align-items:flex-start;gap:14px}
-    .header-right{align-self:flex-end}
-    .site-title{font-size:30px}
-    .site-subtitle{font-size:18px}
-    .story-grid{grid-template-columns:1fr}
-  }
+  .story-card h2{font-size:24px;font-weight:700;color:#d4a574;letter-spacing:2px;margin-bottom:10px}
+  .story-card p{font-size:18px;color:var(--text-dim);line-height:1.7}
+  .site-footer{background:#0c0a08;border-top:1px solid #1f1b16;padding:22px 20px;text-align:center;margin-top:40px}
+  .site-footer::before{content:"";display:block;width:34px;height:1px;background:#6b5540;margin:0 auto 14px}
+  .footer-text{font-size:14px;color:#a89b82;letter-spacing:5px}
+  @media(max-width:640px){.container{padding:30px 18px}.header-inner{flex-direction:column;align-items:flex-start}.header-right{align-self:flex-end}.site-title{font-size:30px}.site-subtitle{font-size:18px}.story-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -239,59 +79,27 @@
 </header>
 
 <div class="container">
-  <div class="story-section">
-    <div class="section-title">宮闈系列</div>
-    <div class="story-grid">
-      <a href="/QLand/palace.html" class="story-card">
-        <h2>宮闈年鑑 · Empire Chronicle</h2>
-        <p>宮鬥、算計、寵愛、生存。一個常在的後宮生存之路。</p>
-      </a>
-    </div>
-  </div>
-
-  <div class="story-section">
-    <div class="section-title">戰爭系列</div>
-    <div class="story-grid">
-      <a href="/QLand/war.html" class="story-card">
-        <h2>戰馬</h2>
-        <p>老兵與馬的最後一程。它完成的任務，從來沒有人知道。</p>
-      </a>
-    </div>
-  </div>
-
-  <div class="story-section">
-    <div class="section-title">笑話系列</div>
-    <div class="story-grid">
-      <a href="/QLand/joke-lily.html" class="story-card">
-        <h2>百合</h2>
-        <p>御膳房裏最危險的菜，不是毒藥，是那道叫「百合」的飯。</p>
-      </a>
-      <a href="/QLand/joke-frog.html" class="story-card">
-        <h2>青蛙</h2>
-        <p>嘲笑慢的人，最後總會聽見一句比慢更重的話。</p>
-      </a>
-    </div>
-  </div>
-
-  <div class="story-section">
-    <div class="section-title">小民天地</div>
-    <div class="story-grid">
-      <a href="/QLand/qu-min-tian-di.html" class="story-card">
-        <h2>小民天地</h2>
-        <p>市井小民的生活隨筆，酸甜苦辣，都是故事。</p>
-      </a>
-    </div>
-  </div>
-
-  <div class="story-section">
-    <div class="section-title">生活隨筆</div>
-    <div class="story-grid">
-      <a href="#" class="story-card">
-        <h2>即將上線</h2>
-        <p>更多故事，敬請期待。</p>
-      </a>
-    </div>
-  </div>
+<script>
+const series = [
+  {"path":"palace.html","title":"宮闈年鑑 · Empire Chronicle","desc":"宮鬥、算計、寵愛、生存。一個常在的後宮生存之路。","section":"宮闈系列"},
+  {"path":"war.html","title":"戰馬","desc":"老兵與馬的最後一程。它完成的任務，從來沒有人知道。","section":"戰爭系列"},
+  {"path":"joke-lily.html","title":"百合","desc":"御膳房裏最危險的菜，不是毒藥，是那道叫「百合」的飯。","section":"笑話系列"},
+  {"path":"joke-frog.html","title":"青蛙","desc":"嘲笑慢的人，最後總會聽見一句比慢更重的話。","section":"笑話系列"},
+  {"path":"qu-min-tian-di.html","title":"小民天地","desc":"市井小民的生活隨筆，酸甜苦辣，都是故事。","section":"生活隨筆"},
+  {"path":"memory-shape.html","title":"未寄出的明信片","desc":"車站前的咖啡店，等著一封不會送到的信。","section":"生活隨筆"}
+];
+const sections = [...new Set(series.map(s => s.section))];
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.container');
+  if (!container) return;
+  sections.forEach(sec => {
+    const row = document.createElement('div');
+    row.className = 'story-section';
+    row.innerHTML = '<div class="section-title">' + sec + '</div><div class="story-grid">' + series.filter(s => s.section === sec).map(s => '<a href="/QLand/' + s.path + '" class="story-card"><h2>' + s.title + '</h2><p>' + s.desc + '</p></a>').join('') + '</div>';
+    container.appendChild(row);
+  });
+});
+</script>
 </div>
 
 <footer class="site-footer">
