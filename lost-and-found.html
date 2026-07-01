@@ -1,56 +1,90 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lost & Found — QLand</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>{{TITLE}}</title>
+<!-- Tracking / Ads (全站統一，每一頁都會被帶入) -->
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xed7ewvsto");
+  </script>
+<!-- AdSense -->
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4391407496285229"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
 <style>
-  :root{--bg:#0b0a10;--text:#e4d8c4;--border:#2a2420;--card-bg:#14110d;--accent:#d4a574}
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--text);font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;line-height:1.9;min-height:100vh;display:flex;flex-direction:column}
-  .site-header{background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);border-bottom:1px solid #dbcdb0;padding:32px 24px}
-  .header-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
-  .back-link{color:#5a4638;text-decoration:none;font-size:20px;letter-spacing:2px;font-weight:700;flex-shrink:0;transition:opacity .2s}
-  .back-link:hover{opacity:.65}
-  .title-group{text-align:center;flex:1;min-width:0}
-  .site-title{font-size:38px;font-weight:800;color:#2a1008;letter-spacing:6px;line-height:1.2}
-  .site-subtitle{font-size:17px;color:#3e2212;letter-spacing:3px;font-weight:700;margin-top:6px}
-  .header-spacer{width:120px;flex-shrink:0}
-  .container{max-width:960px;margin:0 auto;padding:44px 28px 32px;flex:1;width:100%}
-  .section-title{font-size:24px;color:#c8a878;letter-spacing:4px;margin-bottom:22px;padding-bottom:12px;border-bottom:1px dashed #2a2420}
-  .story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-  .story-card{background:var(--card-bg);border:1.5px solid #2a2420;border-radius:14px;padding:26px 24px;text-decoration:none;color:#ddd6c4;transition:all .25s;display:flex;flex-direction:column;gap:12px}
-  .story-card:hover{border-color:#7a6d5a;color:#fff;background:#1a1612;transform:translateY(-2px)}
-  .story-card h2{font-size:26px;font-weight:700;color:#f1e4cc;letter-spacing:3px}
-  .story-card p{font-size:16px;color:#a89a82;line-height:1.7}
-  .site-footer{background:#0c0a08;border-top:1px solid #1f1b16;padding:22px 20px;text-align:center}
-  .footer-text{color:#b8a88a;font-size:13px;letter-spacing:2px}
-  @media(max-width:600px){.container{padding:26px 18px}.site-title{font-size:28px}}
-</style>
+    :root{--bg:#0b0a10;--surface:#14110d;--surface2:#1b1824;--text:#e4d8c4;--text-dim:#b8a890;--accent:#d4a574;--border:#2a2420}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;line-height:1.9;min-height:100vh;display:flex;flex-direction:column}
+    .site-header{background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);border-bottom:1px solid #dbcdb0;padding:32px 28px}
+    .header-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:18px;flex:1 1 auto;min-width:0}
+    .title-block{text-align:left}
+    .site-title{font-size:46px;font-weight:800;color:#2a1008;letter-spacing:7px}
+    .site-subtitle{font-size:24px;color:#3e2212;letter-spacing:3px;font-weight:700;margin-top:4px}
+    .header-right{display:flex;flex-direction:column;align-items:center;gap:6px;flex-shrink:0}
+    .logo-circle{width:72px;height:72px;border-radius:50%;border:1.5px solid #b08d55;background:#f3ecd8;display:flex;align-items:center;justify-content:center}
+    .container{max-width:960px;margin:0 auto;padding:48px 28px 36px;flex:1;width:100%}
+    .site-footer{background:#0c0a08;border-top:1px solid #1f1b16;padding:22px 20px;text-align:center;margin-top:40px}
+    @media(max-width:640px){.container{padding:30px 18px}.header-inner{flex-direction:column;align-items:flex-start}.header-right{align-self:flex-end}.site-title{font-size:30px}.site-subtitle{font-size:18px}}
+  </style>
 </head>
 <body>
 <header class="site-header">
-  <div class="header-inner">
-    <a class="back-link" href="/QLand/lost-and-found.html">← 故事目錄</a>
-    <div class="title-group">
-      <div class="site-title">Lost & Found</div>
-      <div class="site-subtitle">The Shop That Returns What You Lost</div>
-    </div>
-    <div class="header-spacer"></div>
-  </div>
+<div class="header-inner">
+<div class="brand">
+<div class="title-block">
+<div class="site-title">QLand</div>
+<div class="site-subtitle">繁體中文小說平臺</div>
+</div>
+</div>
+<div class="header-right">
+<div class="logo-circle">
+<div class="logo-text">Q</div>
+</div>
+</div>
+</div>
+</header>
+<main class="container">
+    
+<header class="site-header">
+<div class="header-inner">
+<a class="back-link" href="/QLand/lost-and-found.html">← 故事目錄</a>
+<div class="title-group">
+<div class="site-title">Lost &amp; Found</div>
+<div class="site-subtitle">The Shop That Returns What You Lost</div>
+</div>
+<div class="header-spacer"></div>
+</div>
 </header>
 <div class="container">
-  <div class="section-title">目錄</div>
-  <div class="story-grid">
-    <a href="/QLand/lost-and-found.html" class="story-card">
-      <h2>Chapter 1 — The Shop</h2>
-      <p>A dusty shop at the corner of Maple and 5th that returns what you have lost — not objects, but moments.</p>
-    </a>
-  </div>
+<div class="section-title">目錄</div>
+<div class="story-grid">
+<a class="story-card" href="/QLand/lost-and-found.html">
+<h2>Chapter 1 — The Shop</h2>
+<p>A dusty shop at the corner of Maple and 5th that returns what you have lost — not objects, but moments.</p>
+</a>
+</div>
 </div>
 <footer class="site-footer">
-  <div class="footer-text">QLand — 繁體中文小說平台</div>
+<div class="footer-text">QLand — 繁體中文小說平台</div>
+</footer>
+
+  </main>
+<footer class="site-footer">
+<div class="footer-text">© 2026 QLand</div>
 </footer>
 </body>
-</html>

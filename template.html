@@ -1,30 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>{{TITLE}}</title>
-<!-- Tracking / Ads (全站統一，每一頁都會被帶入) -->
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{TITLE}}</title>
+
+  <!-- Tracking / Ads (全站統一，每一頁都會被帶入) -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "xed7ewvsto");
   </script>
-<!-- AdSense -->
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4391407496285229"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
-<style>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4391407496285229" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <style>
     :root{--bg:#0b0a10;--surface:#14110d;--surface2:#1b1824;--text:#e4d8c4;--text-dim:#b8a890;--accent:#d4a574;--border:#2a2420}
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -43,52 +48,26 @@
   </style>
 </head>
 <body>
-<header class="site-header">
-<div class="header-inner">
-<div class="brand">
-<div class="title-block">
-<div class="site-title">QLand</div>
-<div class="site-subtitle">繁體中文小說平臺</div>
-</div>
-</div>
-<div class="header-right">
-<div class="logo-circle">
-<div class="logo-text">Q</div>
-</div>
-</div>
-</div>
-</header>
-<main class="container">
-    
-<header class="site-header">
-<div class="header-inner">
-<a class="back-link" href="/QLand/joke.html">← 故事目錄</a>
-<div class="title-group">
-<div class="site-title">笑話系列</div>
-<div class="site-subtitle">Joke Series</div>
-</div>
-<div class="header-spacer"></div>
-</div>
-</header>
-<div class="container">
-<div class="section-title">目錄</div>
-<div class="story-grid">
-<a class="story-card" href="/QLand/joke-frog.html">
-<h2>第一章 青蛙</h2>
-<p>青蛙笑烏龜慢，最後卻是自己尷尬。</p>
-</a>
-<a class="story-card" href="/QLand/joke-lily.html">
-<h2>第二章 百合</h2>
-<p>御膳房裏最危險的菜，不是毒藥，是那道叫「百合」的飯。</p>
-</a>
-</div>
-</div>
-<footer class="site-footer">
-<div class="footer-text">QLand — 繁體中文小說平台</div>
-</footer>
-
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="title-block">
+          <div class="site-title">QLand</div>
+          <div class="site-subtitle">繁體中文小說平臺</div>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="logo-circle">
+          <div class="logo-text">Q</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    {{BODY}}
   </main>
-<footer class="site-footer">
-<div class="footer-text">© 2026 QLand</div>
-</footer>
+  <footer class="site-footer">
+    <div class="footer-text">© 2026 QLand</div>
+  </footer>
 </body>
+</html>
