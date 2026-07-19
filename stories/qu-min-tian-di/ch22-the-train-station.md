@@ -1,4 +1,4 @@
-![屈民天地 ch22](C:/Users/opc/xiaohei_qumin_tiandi_ch22.png)
+![屈民天地 ch22](assets/xiaohei/xiaohei_qumin_tiandi_ch22.png)
 ## 第22章：車站
 
 車站是她從小到大，最熟悉也最陌生的一個地方。

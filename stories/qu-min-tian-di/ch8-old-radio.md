@@ -1,4 +1,4 @@
-![屈民天地 ch08](C:/Users/opc/xiaohei_qumin_tiandi_ch08.png)
+![屈民天地 ch08](assets/xiaohei/xiaohei_qumin_tiandi_ch08.png)
 ## 第8章：舊收音機
 
 咖啡店的櫃台角落，放著一台舊收音機。

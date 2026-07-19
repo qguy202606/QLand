@@ -1,4 +1,4 @@
-![屈民天地 ch29](C:/Users/opc/xiaohei_qumin_tiandi_ch29.png)
+![屈民天地 ch29](assets/xiaohei/xiaohei_qumin_tiandi_ch29.png)
 ## 第29章：歸途
 
 <br>她決定回家一趟。

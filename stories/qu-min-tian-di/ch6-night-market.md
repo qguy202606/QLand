@@ -1,4 +1,4 @@
-![屈民天地 ch06](C:/Users/opc/xiaohei_qumin_tiandi_ch06.png)
+![屈民天地 ch06](assets/xiaohei/xiaohei_qumin_tiandi_ch06.png)
 ## 第6章：夜市的燈
 
 夜市是她下班之後最愛去的地方。

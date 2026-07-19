@@ -1,4 +1,4 @@
-![屈民天地 ch09](C:/Users/opc/xiaohei_qumin_tiandi_ch09.png)
+![屈民天地 ch09](assets/xiaohei/xiaohei_qumin_tiandi_ch09.png)
 ## 第9章：夜校
 
 她夜里去上了一門課。

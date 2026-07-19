@@ -1,4 +1,4 @@
-![屈民天地 ch17](C:/Users/opc/xiaohei_qumin_tiandi_ch17.png)
+![屈民天地 ch17](assets/xiaohei/xiaohei_qumin_tiandi_ch17.png)
 ## 第17章：回头客
 
 便利商店的对面，有一间小小的修鞋铺。

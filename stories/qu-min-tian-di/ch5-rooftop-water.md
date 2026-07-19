@@ -1,4 +1,4 @@
-![屈民天地 ch05](C:/Users/opc/xiaohei_qumin_tiandi_ch05.png)
+![屈民天地 ch05](assets/xiaohei/xiaohei_qumin_tiandi_ch05.png)
 ## 第5章：天台上的一杯水
 
 她租的房间在三楼，没有电梯，楼顶的天台是对外开放的。

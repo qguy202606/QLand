@@ -1,4 +1,4 @@
-![屈民天地 ch27](C:/Users/opc/xiaohei_qumin_tiandi_ch27.png)
+![屈民天地 ch27](assets/xiaohei/xiaohei_qumin_tiandi_ch27.png)
 ## 第27章：遺忘的架子
 
 便利商店有一面牆，上面掛滿了顾客遺留下的物品。

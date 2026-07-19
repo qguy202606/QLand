@@ -1,4 +1,4 @@
-![屈民天地 ch20](C:/Users/opc/xiaohei_qumin_tiandi_ch20.png)
+![屈民天地 ch20](assets/xiaohei/xiaohei_qumin_tiandi_ch20.png)
 ## 第20章：代代光
 
 她最後一次見到阿婆，是在第二年燈火節的同一張長椅上。

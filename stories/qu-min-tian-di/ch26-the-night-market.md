@@ -1,4 +1,4 @@
-![屈民天地 ch26](C:/Users/opc/xiaohei_qumin_tiandi_ch26.png)
+![屈民天地 ch26](assets/xiaohei/xiaohei_qumin_tiandi_ch26.png)
 ## 第26章：夜市的盡頭
 
 夜市走到盡頭，是一座位於河岸邊的小廣場。

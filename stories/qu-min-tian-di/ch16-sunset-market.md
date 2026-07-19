@@ -1,4 +1,4 @@
-![屈民天地 ch16](C:/Users/opc/xiaohei_qumin_tiandi_ch16.png)
+![屈民天地 ch16](assets/xiaohei/xiaohei_qumin_tiandi_ch16.png)
 ## 第16章：夕陽市場
 
 記憶形狀咖啡店後面的巷子，連接著一個小小的黃昏市場。

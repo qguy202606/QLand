@@ -1,4 +1,4 @@
-![屈民天地 ch14](C:/Users/opc/xiaohei_qumin_tiandi_ch14.png)
+![屈民天地 ch14](assets/xiaohei/xiaohei_qumin_tiandi_ch14.png)
 ## 第14章：給媽媽的信
 
 她決定寫一封信給母親。

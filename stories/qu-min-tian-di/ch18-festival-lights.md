@@ -1,4 +1,4 @@
-![屈民天地 ch18](C:/Users/opc/xiaohei_qumin_tiandi_ch18.png)
+![屈民天地 ch18](assets/xiaohei/xiaohei_qumin_tiandi_ch18.png)
 ## 第18章：節慶燈火
 
 那年城市的燈火節，是十年來最盛大的一次。

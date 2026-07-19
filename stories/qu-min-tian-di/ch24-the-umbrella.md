@@ -1,4 +1,4 @@
-![屈民天地 ch24](C:/Users/opc/xiaohei_qumin_tiandi_ch24.png)
+![屈民天地 ch24](assets/xiaohei/xiaohei_qumin_tiandi_ch24.png)
 ## 第24章：傘
 
 梅雨來臨時，她總是在包包裡放一把傘。

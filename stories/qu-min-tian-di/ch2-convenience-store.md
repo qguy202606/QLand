@@ -1,4 +1,4 @@
-![屈民天地 ch02](C:/Users/opc/xiaohei_qumin_tiandi_ch02.png)
+![屈民天地 ch02](assets/xiaohei/xiaohei_qumin_tiandi_ch02.png)
 ## 第2章：便利商店的對面便利商店的對面，有一間從來沒有名字的書店。
 
 她每天傍晚都會經過那裡。傍晚六點半左右，老闆會把一本破破舊舊的推理小說擱在門口，封面朝外，像是一種暗號。

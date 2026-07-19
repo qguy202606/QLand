@@ -1,4 +1,4 @@
-![屈民天地 ch01](C:/Users/opc/xiaohei_qumin_tiandi_ch01.png)
+![屈民天地 ch01](assets/xiaohei/xiaohei_qumin_tiandi_ch01.png)
 ## 第1章：早市的燈
 
 天還沒亮，老王就已經醒了。

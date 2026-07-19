@@ -1,4 +1,4 @@
-![屈民天地 ch03](C:/Users/opc/xiaohei_qumin_tiandi_ch03.png)
+![屈民天地 ch03](assets/xiaohei/xiaohei_qumin_tiandi_ch03.png)
 ## 第3章：早餐店的板凳
 
 早餐店的老闆總是把板凳排在路邊。

@@ -1,4 +1,4 @@
-![屈民天地 ch04](C:/Users/opc/xiaohei_qumin_tiandi_ch04.png)
+![屈民天地 ch04](assets/xiaohei/xiaohei_qumin_tiandi_ch04.png)
 ## 第4章：雨天的收音機
 
 那台舊收音機是咖啡店唯一的老物。

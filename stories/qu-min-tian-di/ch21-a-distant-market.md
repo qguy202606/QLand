@@ -1,4 +1,4 @@
-![屈民天地 ch21](C:/Users/opc/xiaohei_qumin_tiandi_ch21.png)
+![屈民天地 ch21](assets/xiaohei/xiaohei_qumin_tiandi_ch21.png)
 ## 第21章：遠方市場
 
 她決定去一趟遠方的市場。

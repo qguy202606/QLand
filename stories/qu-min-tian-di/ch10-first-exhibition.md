@@ -1,4 +1,4 @@
-![屈民天地 ch10](C:/Users/opc/xiaohei_qumin_tiandi_ch10.png)
+![屈民天地 ch10](assets/xiaohei/xiaohei_qumin_tiandi_ch10.png)
 ## 第10章：第一次展覽
 
 那是她第一次参加個人展覽。

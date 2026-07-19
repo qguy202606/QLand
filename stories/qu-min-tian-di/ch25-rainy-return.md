@@ -1,4 +1,4 @@
-![屈民天地 ch25](C:/Users/opc/xiaohei_qumin_tiandi_ch25.png)
+![屈民天地 ch25](assets/xiaohei/xiaohei_qumin_tiandi_ch25.png)
 ## 第25章：雨中的歸途
 
 梅雨季的最後一場雨，下的特別久。

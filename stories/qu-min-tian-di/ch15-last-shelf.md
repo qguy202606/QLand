@@ -1,4 +1,4 @@
-![屈民天地 ch15](C:/Users/opc/xiaohei_qumin_tiandi_ch15.png)
+![屈民天地 ch15](assets/xiaohei/xiaohei_qumin_tiandi_ch15.png)
 ## 第15章：最後一層架子
 
 便利商店的貨架邊，總是放著一些從來没有人買的東西。

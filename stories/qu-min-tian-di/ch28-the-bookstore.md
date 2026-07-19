@@ -1,4 +1,4 @@
-![屈民天地 ch28](C:/Users/opc/xiaohei_qumin_tiandi_ch28.png)
+![屈民天地 ch28](assets/xiaohei/xiaohei_qumin_tiandi_ch28.png)
 ## 第28章：書店
 
 她終於決定走進記憶形狀咖啡店旁邊那間從來沒有名字的書店。

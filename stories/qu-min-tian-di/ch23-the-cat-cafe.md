@@ -1,4 +1,4 @@
-![屈民天地 ch23](C:/Users/opc/xiaohei_qumin_tiandi_ch23.png)
+![屈民天地 ch23](assets/xiaohei/xiaohei_qumin_tiandi_ch23.png)
 ## 第23章：貓咖啡
 
 城郊開了一間貓咖啡。

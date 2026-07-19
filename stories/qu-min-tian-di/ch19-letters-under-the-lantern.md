@@ -1,4 +1,4 @@
-![屈民天地 ch19](C:/Users/opc/xiaohei_qumin_tiandi_ch19.png)
+![屈民天地 ch19](assets/xiaohei/xiaohei_qumin_tiandi_ch19.png)
 ## 第19章：燈下的來信
 
 燈火節過後的第三天，她收到了一封信。

@@ -1,4 +1,4 @@
-![屈民天地 ch30](C:/Users/opc/xiaohei_qumin_tiandi_ch30.png)
+![屈民天地 ch30](assets/xiaohei/xiaohei_qumin_tiandi_ch30.png)
 ## 第30章：花店
 
 歸鄉的那天，她在街角開了一家小小的花店。

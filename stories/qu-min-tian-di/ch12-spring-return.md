@@ -1,4 +1,4 @@
-![屈民天地 ch12](C:/Users/opc/xiaohei_qumin_tiandi_ch12.png)
+![屈民天地 ch12](assets/xiaohei/xiaohei_qumin_tiandi_ch12.png)
 ## 第12章：春日的回信
 
 冬天過後，第一個春日的午後，她收到了一封信。

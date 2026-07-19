@@ -1,4 +1,4 @@
-![屈民天地 ch07](C:/Users/opc/xiaohei_qumin_tiandi_ch07.png)
+![屈民天地 ch07](assets/xiaohei/xiaohei_qumin_tiandi_ch07.png)
 # 午後的雨
 
 阿明從小就記得，媽媽總是在雨天關店。

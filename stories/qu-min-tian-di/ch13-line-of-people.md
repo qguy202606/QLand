@@ -1,4 +1,4 @@
-![屈民天地 ch13](C:/Users/opc/xiaohei_qumin_tiandi_ch13.png)
+![屈民天地 ch13](assets/xiaohei/xiaohei_qumin_tiandi_ch13.png)
 ## 第13章：一排人
 
 記憶形狀咖啡店門口，每天早上七點，都會出現一個排隊的隊伍。

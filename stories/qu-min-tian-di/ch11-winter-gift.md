@@ -1,4 +1,4 @@
-![屈民天地 ch11](C:/Users/opc/xiaohei_qumin_tiandi_ch11.png)
+![屈民天地 ch11](assets/xiaohei/xiaohei_qumin_tiandi_ch11.png)
 ## 第11章：冬天的禮物
 
 那年冬天特別冷，憲木的風把街上的人吹得腳步匆匆。
