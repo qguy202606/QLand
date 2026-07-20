@@ -1,26 +1,9 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>{{TITLE}}</title>
-<!-- Tracking / Ads (全站統一，每一頁都會被帶入) -->
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xed7ewvsto");
-  </script>
-<!-- AdSense -->
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4391407496285229"></script>
+<title>橘子園（The Orange Grove）</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
@@ -39,101 +22,74 @@
     .logo-circle{width:72px;height:72px;border-radius:50%;border:1.5px solid #b08d55;background:#f3ecd8;display:flex;align-items:center;justify-content:center}
     .container{max-width:960px;margin:0 auto;padding:48px 28px 36px;flex:1;width:100%}
     .site-footer{background:#0c0a08;border-top:1px solid #1f1b16;padding:22px 20px;text-align:center;margin-top:40px}
-    @media(max-width:640px){.container{padding:30px 18px}.header-inner{flex-direction:column;align-items:flex-start}.header-right{align-self:flex-end}.site-title{font-size:30px}.site-subtitle{font-size:18px}}
+    .series{margin-bottom:34px}
+    .series-title{font-size:18px;color:var(--accent);letter-spacing:3px;margin-bottom:10px;text-transform:uppercase}
+    .chapter-list{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .chapter-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;text-decoration:none;color:var(--text);font-size:14px;transition:transform .08s ease,background .15s ease}
+    .chapter-card:hover{background:var(--surface2);border-color:#3d342a;transform:translateY(-1px)}
+    .section-label{grid-column:1/-1;font-size:12px;color:var(--text-dim);letter-spacing:3px;margin-top:6px;padding-bottom:4px;border-bottom:1px dashed var(--border)}
+    @media(max-width:860px){.chapter-list{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:560px){.chapter-list{grid-template-columns:repeat(2,1fr)}}
   </style>
 </head>
 <body>
 <header class="site-header">
-<div class="header-inner">
-<div class="brand">
-<div class="title-block">
-<div class="site-title">QLand</div>
-<div class="site-subtitle">繁體中文小說平臺</div>
-</div>
-</div>
-<div class="header-right">
-<div class="logo-circle">
-<div class="logo-text">Q</div>
-</div>
-</div>
-</div>
+  <div class="header-inner">
+    <div class="brand">
+      <div class="title-block">
+        <div class="site-title">QLand</div>
+        <div class="site-subtitle">繁體中文小說平臺</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="logo-circle">
+        <div class="logo-text">Q</div>
+      </div>
+    </div>
+  </div>
 </header>
 <main class="container">
-    
-<header class="site-header">
-<div class="header-inner">
-<div class="brand">
-<div class="brand-icon">
-<svg aria-hidden="true" fill="none" height="56" viewbox="0 0 80 80" width="56" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#6e4fa8" height="28" rx="2" width="48" x="16" y="34"></rect>
-<rect fill="#6e4fa8" height="28" rx="2" width="36" x="24" y="20"></rect>
-<polygon fill="#c03570" points="28,20 34,3 40,20"></polygon>
-<polygon fill="#c03570" points="36,20 40,0 44,20"></polygon>
-<polygon fill="#c03570" points="42,20 48,3 54,20"></polygon>
-<rect fill="#f3e9d2" height="14" rx="2" width="16" x="32" y="48"></rect>
-<path d="M32 48 L40 41 L48 48 Z" fill="#f3e9d2"></path>
-<rect fill="#e6dcc4" height="10" rx="1" width="10" x="24" y="52"></rect>
-<rect fill="#e6dcc4" height="10" rx="1" width="10" x="50" y="52"></rect>
-</svg>
-</div>
-<div class="title-block">
-<h1 class="site-title">QLand</h1>
-<p class="site-subtitle">繁體中文小說平臺</p>
-<p class="site-tagline">宮闈、戰爭、人間——系列故事集</p>
-<p class="site-desc">以章節形式連載，專注智鬥與人情。</p>
-</div>
-</div>
-<div class="header-right">
-<div class="logo-circle">
-<svg aria-hidden="true" fill="none" height="52" viewbox="0 0 64 64" width="52" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#6e4fa8" height="24" rx="2" width="40" x="12" y="28"></rect>
-<rect fill="#6e4fa8" height="22" rx="2" width="28" x="18" y="18"></rect>
-<polygon fill="#c03570" points="22,18 26,5 30,18"></polygon>
-<polygon fill="#c03570" points="30,18 34,2 38,18"></polygon>
-<polygon fill="#c03570" points="36,18 40,5 44,18"></polygon>
-<rect fill="#f3e9d2" height="12" rx="1" width="10" x="27" y="40"></rect>
-<rect fill="#e6dcc4" height="8" rx="1" width="8" x="20" y="44"></rect>
-<rect fill="#e6dcc4" height="8" rx="1" width="8" x="36" y="44"></rect>
-</svg>
-</div>
-<div class="logo-text">KING</div>
-</div>
-</div>
-</header>
-<div class="container">
-<div class="story-section">
-<div class="section-title">宮闈系列</div>
-<div class="story-grid">
-<a class="story-card" href="/QLand/palace.html"><h2>宮闈年鑑 · Empire Chronicle</h2><p>宮鬥、算計、寵愛、生存。一個常在的後宮生存之路。</p></a>
-</div>
-</div>
-<div class="story-section">
-<div class="section-title">戰爭系列</div>
-<div class="story-grid">
-<a class="story-card" href="/QLand/war.html"><h2>戰馬</h2><p>老兵與馬的最後一程。它完成的任務，從來沒有人知道。</p></a>
-</div>
-</div>
-<div class="story-section">
-<div class="section-title">笑話系列</div>
-<div class="story-grid">
-<a class="story-card" href="/QLand/joke.html"><h2>笑話系列</h2><p>宮中諧音笑話合集，短篇輕鬆。</p></a>
-</div>
-</div>
-<div class="story-section">
-<div class="section-title">生活隨筆</div>
-<div class="story-grid">
-<a class="story-card" href="/QLand/qu-min-tian-di.html"><h2>小民天地</h2><p>市井小民的生活隨筆，酸甜苦辣，都是故事。</p></a>
-<a class="story-card" href="/QLand/memory-shape.html"><h2>未寄出的明信片</h2><p>車站前的咖啡店，等著一封不會送到的信。</p></a>
-<a class="story-card" href="/QLand/lost-and-found.html"><h2>Lost &amp; Found</h2><p>一家會歸還你遺失之物的店。</p></a>
-</div>
-</div>
-</div>
+  <div class="series">
+    <div class="series-title">屈民天地</div>
+    <div class="chapter-list">
+      <div class="section-label">第一至十章</div>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch1-market-dawn.md">第一章·早市的燈</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch2-convenience-store.md">第二章·便利商店的對面</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch3-breakfast-shop-bench.md">第三章·早餐店的板凳</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch4-rainy-radio.md">第四章·雨天的收音機</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch5-rooftop-water.md">第五章·天台上的一杯水</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch6-night-market.md">第六章·夜市的燈</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch7-rainy-afternoon.md">第七章·午後的雨</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch8-old-radio.md">第八章·舊收音機</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch9-night-class.md">第九章·夜校</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch10-first-exhibition.md">第十章·第一次展覽</a>
+      <div class="section-label">第十一至二十章</div>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch11-winter-gift.md">第十一章·冬天的禮物</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch12-spring-return.md">第十二章·春日的回信</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch13-line-of-people.md">第十三章·一排人</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch14-letter-to-mothers.md">第十四章·給媽媽的信</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch15-last-shelf.md">第十五章·最後一層架子</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch16-sunset-market.md">第十六章·夕陽市場</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch17-returning-customers.md">第十七章·回頭客</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch18-festival-lights.md">第十八章·節慶燈火</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch19-letters-under-the-lantern.md">第十九章·燈下的來信</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch20-generations-of-light.md">第二十章·代代光</a>
+      <div class="section-label">第二十一至三十章</div>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch21-a-distant-market.md">第二十一章·遠方市場</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch22-the-train-station.md">第二十二章·車站</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch23-the-cat-cafe.md">第二十三章·貓咖啡</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch24-the-umbrella.md">第二十四章·傘</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch25-rainy-return.md">第二十五章·雨中的歸途</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch26-the-night-market.md">第二十六章·夜市的盡頭</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch27-the-forgotten-shelf.md">第二十七章·遺忘的架子</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch28-the-bookstore.md">第二十八章·書店</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch29-the-return.md">第二十九章·歸途</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch30-the-flower-shop.md">第三十章·花店</a>
+    </div>
+  </div>
+</main>
 <footer class="site-footer">
-<div class="footer-text">QLand — 繁體中文小說平台</div>
-</footer>
-
-  </main>
-<footer class="site-footer">
-<div class="footer-text">© 2026 QLand</div>
+  <div class="footer-text">© 2026 QLand</div>
 </footer>
 </body>
+</html>
