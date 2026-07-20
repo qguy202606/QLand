@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
+  <!-- Tracking / Ads (全站統一，每一頁都會被帶入) -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xed7ewvsto");
+  </script>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4391407496285229" crossorigin="anonymous"></script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>未寄出的明信片 — QLand</title>
 <style>
-  :root{--bg:#0b0a10;--text:#e4d8c4;--text-dim:#a89a82;--accent:#d4a574;--border:#2a2420}
+  :root{--bg:#0b0a10;--text:#e4d8c4;--text-dim:#cbbfa6;--accent:#d4a574;--border:#2a2420}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--text);font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;line-height:1.9;min-height:100vh;display:flex;flex-direction:column}
