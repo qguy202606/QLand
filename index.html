@@ -6,28 +6,42 @@
 <title>屈民天地｜橘子園</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&amp;display=swap" rel="stylesheet"/>
 <style>
-    :root{--bg:#0b0a10;--surface:#14110d;--surface2:#1b1824;--text:#e4d8c4;--text-dim:#b8a890;--accent:#d4a574;--border:#2a2420}
+    :root{
+      --cream:#f5ecda; --cream-dark:#eadcbe; --ink:#1a1510; --bg:#0f0d0a; --surface:#18140f; --surface2:#221c15;
+      --text:#ece3d0; --text-dim:#b8a890; --accent:#d4a574; --border:#2f2820; --line:#2a2218;
+      --serif:"Noto Serif TC","Source Han Serif TC","Songti TC","PMingLiU",serif
+    }
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;line-height:1.9;min-height:100vh;display:flex;flex-direction:column}
-    .site-header{background:linear-gradient(180deg,#f5ecda 0%,#eadcbe 100%);border-bottom:1px solid #dbcdb0;padding:32px 28px}
-    .header-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{display:flex;align-items:center;gap:18px;flex:1 1 auto;min-width:0}
-    .title-block{text-align:left}
-    .site-title{font-size:46px;font-weight:800;color:#2a1008;letter-spacing:7px}
-    .site-subtitle{font-size:24px;color:#3e2212;letter-spacing:3px;font-weight:700;margin-top:4px}
-    .header-right{display:flex;flex-direction:column;align-items:center;gap:6px;flex-shrink:0}
-    .logo-circle{width:72px;height:72px;border-radius:50%;border:1.5px solid #b08d55;background:#f3ecd8;display:flex;align-items:center;justify-content:center}
-    .container{max-width:960px;margin:0 auto;padding:48px 28px 36px;flex:1;width:100%}
-    .site-footer{background:#0c0a08;border-top:1px solid #1f1b16;padding:22px 20px;text-align:center;margin-top:40px}
-    .series{margin-bottom:34px}
-    .series-title{font-size:18px;color:var(--accent);letter-spacing:3px;margin-bottom:10px;text-transform:uppercase}
+    body{background:var(--bg);color:var(--text);font-family:var(--serif);line-height:2;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+    /* Header */
+    .site-header{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-dark) 100%);border-bottom:1px solid #000;padding:28px 24px;color:var(--ink)}
+    .header-inner{max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .site-title{font-size:52px;font-weight:900;color:#1a1510;letter-spacing:10px;line-height:1.1}
+    .site-subtitle{font-size:15px;color:#3d2610;letter-spacing:2px;font-weight:700;margin-top:6px;text-transform:uppercase}
+    .search-btn{width:54px;height:54px;border-radius:50%;border:1px solid #b08d55;background:#f3ecd8;display:grid;place-items:center;color:#7a5c2a;flex-shrink:0}
+
+    /* Content */
+    .container{max-width:980px;margin:0 auto;padding:44px 24px 40px;flex:1;width:100%}
+    .series{margin-bottom:36px}
+    .series-title{font-size:16px;color:var(--accent);letter-spacing:6px;margin-bottom:16px;font-weight:700}
+    .section-label{grid-column:1/-1;font-size:13px;color:var(--text-dim);letter-spacing:4px;margin-top:14px;padding-bottom:6px;border-bottom:1px dashed var(--line)}
     .chapter-list{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .chapter-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;text-decoration:none;color:var(--text);font-size:14px;transition:transform .08s ease,background .15s ease}
-    .chapter-card:hover{background:var(--surface2);border-color:#3d342a;transform:translateY(-1px)}
-    .section-label{grid-column:1/-1;font-size:12px;color:var(--text-dim);letter-spacing:3px;margin-top:6px;padding-bottom:4px;border-bottom:1px dashed var(--border)}
+    .chapter-card{
+      display:block;background:var(--surface);border:1px solid var(--border);border-radius:14px;
+      padding:22px 14px;text-align:center;text-decoration:none;color:#f2e8d0;
+      font-size:15px;line-height:1.55;transition:transform .1s ease,background .2s ease,border-color .2s ease,color .2s ease;
+      letter-spacing:.8px;
+    }
+    .chapter-card:hover{background:var(--surface2);border-color:#4a3e32;color:#fff4e0;transform:translateY(-1px)}
+    .chapter-card:active{transform:translateY(0)}
+
+    /* Footer */
+    .site-footer{background:#0a0806;border-top:1px solid #1a1510;padding:22px 20px;text-align:center;margin-top:36px;color:#6a5d4f;font-size:13px;letter-spacing:2px}
+
     @media(max-width:860px){.chapter-list{grid-template-columns:repeat(3,1fr)}}
     @media(max-width:560px){.chapter-list{grid-template-columns:repeat(2,1fr)}}
   </style>
@@ -36,16 +50,16 @@
 <header class="site-header">
   <div class="header-inner">
     <div class="brand">
-      <div class="title-block">
+      <div>
         <div class="site-title">QLand</div>
         <div class="site-subtitle">繁體中文小說平臺</div>
       </div>
     </div>
-    <div class="header-right">
-      <div class="logo-circle">
-        <div class="logo-text">Q</div>
-      </div>
-    </div>
+    <button class="search-btn" aria-label="搜尋" title="搜尋">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    </button>
   </div>
 </header>
 <main class="container">
@@ -54,37 +68,37 @@
     <div class="chapter-list">
       <div class="section-label">第一至十章</div>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch1-market-dawn.md">第一章·早市的燈</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch2-convenience-store.md">第二章·便利商店的對面</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch3-breakfast-shop-bench.md">第三章·早餐店的板凳</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch4-rainy-radio.md">第四章·雨天的收音機</a>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch5-rooftop-water.md">第五章·天台上的一杯水</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch6-night-market.md">第六章·夜市的燈</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch7-rainy-afternoon.md">第七章·午後的雨</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch8-old-radio.md">第八章·舊收音機</a>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch9-night-class.md">第九章·夜校</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch2-convenience-store.md">第二章·便利商店的對面</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch6-night-market.md">第六章·夜市的燈</a>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch10-first-exhibition.md">第十章·第一次展覽</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch3-breakfast-shop-bench.md">第三章·早餐店的板凳</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch7-rainy-afternoon.md">第七章·午後的雨</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch4-rainy-radio.md">第四章·雨天的收音機</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch8-old-radio.md">第八章·舊收音機</a>
       <div class="section-label">第十一至二十章</div>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch11-winter-gift.md">第十一章·冬天的禮物</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch12-spring-return.md">第十二章·春日的回信</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch13-line-of-people.md">第十三章·一排人</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch14-letter-to-mothers.md">第十四章·給媽媽的信</a>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch15-last-shelf.md">第十五章·最後一層架子</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch16-sunset-market.md">第十六章·夕陽市場</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch17-returning-customers.md">第十七章·回頭客</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch18-festival-lights.md">第十八章·節慶燈火</a>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch19-letters-under-the-lantern.md">第十九章·燈下的來信</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch12-spring-return.md">第十二章·春日的回信</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch16-sunset-market.md">第十六章·夕陽市場</a>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch20-generations-of-light.md">第二十章·代代光</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch13-line-of-people.md">第十三章·一排人</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch17-returning-customers.md">第十七章·回頭客</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch14-letter-to-mothers.md">第十四章·給媽媽的信</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch18-festival-lights.md">第十八章·節慶燈火</a>
       <div class="section-label">第二十一至三十章</div>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch21-a-distant-market.md">第二十一章·遠方市場</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch22-the-train-station.md">第二十二章·車站</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch23-the-cat-cafe.md">第二十三章·貓咖啡</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch24-the-umbrella.md">第二十四章·傘</a>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch25-rainy-return.md">第二十五章·雨中的歸途</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch26-the-night-market.md">第二十六章·夜市的盡頭</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch27-the-forgotten-shelf.md">第二十七章·遺忘的架子</a>
-      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch28-the-bookstore.md">第二十八章·書店</a>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch29-the-return.md">第二十九章·歸途</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch22-the-train-station.md">第二十二章·車站</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch26-the-night-market.md">第二十六章·夜市的盡頭</a>
       <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch30-the-flower-shop.md">第三十章·花店</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch23-the-cat-cafe.md">第二十三章·貓咖啡</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch27-the-forgotten-shelf.md">第二十七章·遺忘的架子</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch24-the-umbrella.md">第二十四章·傘</a>
+      <a class="chapter-card" href="/QLand/stories/qu-min-tian-di/ch28-the-bookstore.md">第二十八章·書店</a>
     </div>
   </div>
 </main>
@@ -93,4 +107,3 @@
 </footer>
 </body>
 </html>
-<!-- pages rebuild trigger -->
