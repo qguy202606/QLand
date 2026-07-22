@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>記憶形狀・章節目錄</title>
+<style>
+  :root{--bg:#f7f1e8;--panel:#fffaf2;--ink:#3a3028;--muted:#7a7060;--accent:#c9a96e;--border:#e3d8c4}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Microsoft JhengHei","Noto Serif TC",serif;line-height:1.7}
+  .wrap{max-width:980px;margin:0 auto;padding:40px 24px}
+  .hdr{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+  .title-main{font-size:24px;letter-spacing:2px}
+  .title-sub{font-size:12px;color:var(--muted);letter-spacing:4px;margin-top:4px}
+  nav{margin:10px 0 22px;font-size:13px;color:var(--muted)}
+  nav a{color:var(--accent);text-decoration:none;margin:0 6px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr)}}
+  .btn{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:0 2px 0 rgba(0,0,0,0.04);text-align:center;text-decoration:none;color:var(--ink);font-size:14px}
+  .btn:hover{background:#fff3e0;border-color:#cbb89a}
+  .section-label{grid-column:1/-1;font-size:12px;color:var(--muted);letter-spacing:3px;margin-top:8px;padding-bottom:4px;border-bottom:1px dashed var(--border)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <div>
+      <div class="title-main">記憶形狀・章節目錄</div>
+      <div class="title-sub">MEMORY SHAPE</div>
+    </div>
+  </div>
+  <nav><a href="./">← 返回總覽</a></nav>
+  <div class="grid">
+    <div class="section-label">第一部 1-15</div>
+    <a class="btn" href="ch1-unsent-postcard.md">第一章·未寄出的明信片</a>
+    <a class="btn" href="ch2-coffee-shop-name.md">第二章·咖啡店的名字</a>
+    <a class="btn" href="ch3 third-guest.md">第三章·第三位客人</a>
+    <a class="btn" href="ch4-rainy-customer.md">第四章·雨天來的客人</a>
+    <a class="btn" href="ch5-fifth-table.md">第五章·第五桌</a>
+    <a class="btn" href="ch6-morning-light.md">第六章·晨光</a>
+    <a class="btn" href="ch7-rainy-afternoon.md">第七章·午後雷雨</a>
+    <a class="btn" href="ch8-old-radio.md">第八章·舊收音機</a>
+    <a class="btn" href="ch9 third-floor.md">第九章·三樓</a>
+    <a class="btn" href="ch10-closing-time.md">第十章·打烊</a>
+    <a class="btn" href="ch11 third-guest-secret.md">第十一章·第三位客人的秘密</a>
+    <a class="btn" href="ch12-fourth-guest.md">第十二章·第四位客人</a>
+    <a class="btn" href="ch13-fifth-table.md">第十三章·第五桌</a>
+    <a class="btn" href="ch14-shape-of-light.md">第十四章·光的形狀</a>
+    <a class="btn" href="ch15-memory-color.md">第十五章·記憶的顏色</a>
+
+    <div class="section-label">第二部 16-24</div>
+    <a class="btn" href="ch16-shape-of-light-2.md">第十六章·光的形状（第二部）</a>
+    <a class="btn" href="ch17-new-faces.md">第十七章·咖啡店的新面孔</a>
+  </div>
+</div>
+</body>
+</html>

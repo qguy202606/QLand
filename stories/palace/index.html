@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>錦繡後宮錄・章節目錄</title>
+<style>
+  :root{--bg:#f7f1e8;--panel:#fffaf2;--ink:#3a3028;--muted:#7a7060;--accent:#c9a96e;--border:#e3d8c4}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Microsoft JhengHei","Noto Serif TC",serif;line-height:1.7}
+  .wrap{max-width:980px;margin:0 auto;padding:40px 24px}
+  .hdr{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+  .icon{width:44px;height:54px;display:inline-block}
+  .icon svg{width:100%;height:100%}
+  .title-main{font-size:24px;letter-spacing:2px}
+  .title-sub{font-size:12px;color:var(--muted);letter-spacing:4px;margin-top:4px}
+  nav{margin:10px 0 22px;font-size:13px;color:var(--muted)}
+  nav a{color:var(--accent);text-decoration:none;margin:0 6px}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:860px){.grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr)}}
+  .btn{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:0 2px 0 rgba(0,0,0,0.04);text-align:center;text-decoration:none;color:var(--ink);font-size:14px;transition:none}
+  .btn:hover{background:#fff3e0;border-color:#cbb89a}
+  .section-label{grid-column:1/-1;font-size:12px;color:var(--muted);letter-spacing:3px;margin-top:8px;padding-bottom:4px;border-bottom:1px dashed var(--border)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hdr">
+    <div class="icon">
+      <svg viewBox="0 0 44 54" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="6"  width="32" height="14" rx="3" fill="#6da87e"/>
+        <rect x="6" y="22" width="32" height="14" rx="3" fill="#5a96c8"/>
+        <rect x="6" y="38" width="32" height="12" rx="3" fill="#c97a7a"/>
+      </svg>
+    </div>
+    <div>
+      <div class="title-main">錦繡後宮錄・章節目錄</div>
+      <div class="title-sub">PALACE CHRONICLES</div>
+    </div>
+  </div>
+  <nav><a href="./">← 返回總覽</a></nav>
+
+  <div class="grid">
+    <div class="section-label">正文 ・ 01–20</div>
+
+    <a class="btn" href="ch1-gate-closed.md">第一章・宮門一閉</a>
+    <a class="btn" href="ch2-night-patrol.md">第二章・夜巡的腳步聲</a>
+    <a class="btn" href="ch3-first-move.md">第三章・棋盤上的第一步</a>
+    <a class="btn" href="ch4-unfinished-lunch.md">第四章・未說完的午膳</a>
+    <a class="btn" href="ch5-old-attendant.md">第五章・御花園的舊侍女</a>
+    <a class="btn" href="ch6-first-test.md">第六章・暗流</a>
+
+    <div class="section-label">私房篇 ・ 01–26</div>
+
+    <a class="btn" href="story_private_ch1.md">私房篇一・太后的人</a>
+    <a class="btn" href="story_private_ch2.md">私房篇二・真相</a>
+    <a class="btn" href="story_private_ch21.md">私房篇二十一・最後的龍涎殿</a>
+    <a class="btn" href="story_private_ch22.md">私房篇二十二・太后的秘密</a>
+    <a class="btn" href="story_private_ch23.md">私房篇二十三・秘密的價格</a>
+    <a class="btn" href="story_private_ch24.md">私房篇二十四・三個月的盡頭</a>
+    <a class="btn" href="story_private_ch25.md">私房篇二十五・回宮</a>
+    <a class="btn" href="story_private_ch26.md">私房篇二十六・水火</a>
+
+    <div class="section-label">番外</div>
+    <a class="btn" href="./episodes/ep21.md">番外一・冷宮舊部</a>
+    <a class="btn" href="./episodes/ep22.md">番外二・秋姑姑的黃昏</a>
+    <a class="btn" href="./episodes/ep23.md">番外三・鳳儀台的秘密</a>
+    <a class="btn" href="./palace-private/deeper-story/xiaoxin-deep.md">外傳・小芯的深夜</a>
+  </div>
+</div>
+</body>
+</html>

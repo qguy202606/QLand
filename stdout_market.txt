@@ -1,0 +1,1 @@
+{"timestamp": "2026-07-21T17:16:11Z", "price": 66435.955, "open_order_qty": 0.001, "open_order_limit": 60000, "side": "buy", "impact_pct": null, "depth_available": null, "status": "no_orderbook", "symbol": "BTC/USD", "exchange": "coinbase", "open_order_id": "cd4055f5-0913-4631-8a27-1712a0245ca7"}
