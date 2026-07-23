@@ -86,7 +86,7 @@ small,.muted{color:#f5efe4 !important}
 (()=>{
 const nums=["第一章", "第二章", "第三章", "第四章", "第五章", "第六章", "第七章", "第八章", "第九章", "第十章", "第十一章", "第十二章", "第十三章", "第十四章", "第十五章", "第十六章", "第十七章", "第十八章", "第十九章"];
 const titles=["宮門一閉，便是另一片天", "夜巡的腳步聲", "棋盤上的第一步", "未說完的午膳", "御花園的舊侍女", "暗流", "暗流湧動", "鳳冠之路", "火後", "玉蘭殿的夜", "太后的人", "冷宮的盟友", "夜巡的刺客", "棋手的微笑", "鳳儀台的秘密", "壽宴的暗湧", "冷宮的遺書", "最後一步", "鳳冠"];
-const chars=[...document.querySelectorAll('.ch-body')].map(el=>(el.textContent||'').length);
+const chars=[...document.querySelectorAll('.ch-body')].map(el=>(el.innerText||el.textContent||'').length);
 const total=chars.reduce((a,b)=>a+b,0);
 document.getElementById('total-words').textContent=total;
 document.getElementById('total-ch').textContent=nums.length;
