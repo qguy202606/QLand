@@ -1,65 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>屈民天地｜橘子園</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&amp;display=swap" rel="stylesheet"/>
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&display=swap" rel="stylesheet"/>
 <style>
-    :root{
-      --cream:#ffffff; --cream-dark:#eadcbe; --ink:#f5ecda; --bg:#f5ecda; --surface:#ffffff; --surface2:#ffffff;
-      --text:#f5ecda; --text-dim:#5a4638; --accent:#b08d55; --border:#5a4638; --line:#4a3f33;
-      --serif:"Noto Serif TC","Source Han Serif TC","Songti TC","PMingLiU",serif
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{background:#f5ecda;color:var(--text);font-family:var(--serif);line-height:2;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-
-    .site-header{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-dark) 100%);border-bottom:1px solid #000;padding:28px 24px;color:var(--ink)}
-    .header-inner{max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .site-title{font-size:52px;font-weight:900;color:#f5ecda;letter-spacing:10px;line-height:1.1}
-    .site-subtitle{font-size:15px;color:#3d2610;letter-spacing:2px;font-weight:700;margin-top:6px;text-transform:uppercase}
-    .search-btn{width:54px;height:54px;border-radius:50%;border:1px solid #b08d55;background:#ffffff;display:grid;place-items:center;color:#b08d55;flex-shrink:0}
-
-    .container{max-width:980px;margin:0 auto;padding:44px 24px 40px;flex:1;width:100%}
-    .series{margin-bottom:40px}
-    .series-title{font-size:16px;color:var(--accent);letter-spacing:6px;margin-bottom:18px;font-weight:700;text-transform:uppercase}
-    .section-label{grid-column:1/-1;font-size:13px;color:var(--text-dim);letter-spacing:4px;margin-top:14px;padding-bottom:6px;border-bottom:1px dashed var(--line)}
-    .chapter-list{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .chapter-card{
-      display:block;background:var(--surface);border:1px solid var(--border);border-radius:14px;
-      padding:22px 14px;text-align:center;text-decoration:none;color:#5a4638;
-      font-size:15px;line-height:1.55;transition:transform .1s ease,background .2s ease,border-color .2s ease,color .2s ease;
-      letter-spacing:.8px;
-    }
-    .chapter-card:hover{background:var(--surface2);border-color:#a89880;color:#ffffff;transform:translateY(-1px)}
-    .chapter-card:active{transform:translateY(0)}
-
-    .story-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
-    .story-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px 18px;text-decoration:none;color:var(--text);transition:transform .15s,border-color .15s}
-    .story-card:hover{border-color:#a89880;transform:translateY(-2px);color:#ffffff}
-    .story-card .series{font-size:12px;color:var(--accent);letter-spacing:2px;margin-bottom:8px}
-    .story-card h2{font-size:20px;color:#ffffff;margin-bottom:8px;font-weight:700}
-    .story-card p{font-size:14px;color:var(--text-dim);line-height:1.7}
-
-    .site-footer{background:#f5ecda;border-top:1px solid #f5ecda;padding:22px 20px;text-align:center;margin-top:36px;color:#5a4638;font-size:13px;letter-spacing:2px}
-    @media(max-width:860px){.chapter-list{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:560px){.chapter-list{grid-template-columns:repeat(2,1fr)}}
-  </style>
-<style>
-:root{--paper:#ffffff;--ink:#1c1711;--muted:#5a4638;--accent:#b08d55;--border:#5a4638}
-body{background:#f5ecda;color:#ffffff !important;color:#ffffff !important}
-p,li{color:#ffffff !important}
-h1,h2,h3,h4,h5,h6{color:#f5ecda !important}
-a{color:#b08d55 !important}
-small,.muted,.section-label{color:#5a4638 !important}
-.chapter-card{color:#ffffff !important;background:#ffffff !important;border-color:#5a4638 !important}
-.chapter-card:hover{color:#ffffff !important;background:#ffffff !important;border-color:#a89880 !important}
-.story-card{color:#ffffff !important}
-.story-card h2{color:#f5ecda !important}
-.story-card p{color:#5a4638 !important}
+  :root{
+    --cream:#f5ecda; --cream-dark:#eadcbe; --ink:#1a1510; --bg:#faf6f0; --surface:#ffffff; --surface2:#f5ecda;
+    --text:#2a221c; --text-dim:#5a4638; --accent:#b08d55; --border:#5a4638; --line:#c8b896;
+    --serif:"Noto Serif TC","Source Han Serif TC","Songti TC","PMingLiU",serif
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--serif);line-height:2;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .site-header{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-dark) 100%);border-bottom:1px solid #000;padding:28px 24px;color:var(--ink)}
+  .header-inner{max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+  .site-title{font-size:52px;font-weight:900;color:#1a1510;letter-spacing:10px;line-height:1.1}
+  .site-subtitle{font-size:15px;color:#3d2610;letter-spacing:2px;font-weight:700;margin-top:6px;text-transform:uppercase}
+  .search-btn{width:54px;height:54px;border-radius:50%;border:1px solid #b08d55;background:#f5ecda;display:grid;place-items:center;color:#7a5c2a;flex-shrink:0}
+  .container{max-width:980px;margin:0 auto;padding:44px 24px 40px;flex:1;width:100%}
+  .series{margin-bottom:40px}
+  .series-title{font-size:16px;color:#7a5c2a;letter-spacing:6px;margin-bottom:18px;font-weight:700;text-transform:uppercase}
+  .section-label{grid-column:1/-1;font-size:13px;color:#5a4638;letter-spacing:4px;margin-top:14px;padding-bottom:6px;border-bottom:1px dashed var(--line)}
+  .chapter-list{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .chapter-card{
+    display:block;background:var(--surface);border:1px solid var(--border);border-radius:14px;
+    padding:22px 14px;text-align:center;text-decoration:none;color:#2a221c;
+    font-size:15px;line-height:1.55;transition:transform .1s ease,background .2s ease,border-color .2s ease,color .2s ease;
+    letter-spacing:.8px;
+  }
+  .chapter-card:hover{background:var(--surface2);border-color:#a89880;color:#1a1510;transform:translateY(-1px)}
+  .chapter-card:active{transform:translateY(0)}
+  .story-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+  .story-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px 18px;text-decoration:none;color:var(--text);transition:transform .15s,border-color .15s}
+  .story-card:hover{border-color:#a89880;transform:translateY(-2px);color:#1a1510}
+  .story-card .series{font-size:12px;color:#7a5c2a;letter-spacing:2px;margin-bottom:8px}
+  .story-card h2{font-size:20px;color:#1a1510;margin-bottom:8px;font-weight:700}
+  .story-card p{font-size:14px;color:#5a4638;line-height:1.7}
+  .site-footer{background:var(--cream);border-top:1px solid var(--line);padding:22px 20px;text-align:center;margin-top:36px;color:#5a4638;font-size:13px;letter-spacing:2px}
+  @media(max-width:860px){.chapter-list{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.chapter-list{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -79,7 +62,6 @@ small,.muted,.section-label{color:#5a4638 !important}
   </div>
 </header>
 <main class="container">
-
   <div class="series">
     <div class="series-title">屈民天地</div>
     <div class="chapter-list">
@@ -118,7 +100,6 @@ small,.muted,.section-label{color:#5a4638 !important}
       <a class="chapter-card" href="qu-min-tian-di.html">第三十章·花店</a>
     </div>
   </div>
-
   <div class="series">
     <div class="series-title">故事系列</div>
     <div class="story-grid">
@@ -160,6 +141,3 @@ small,.muted,.section-label{color:#5a4638 !important}
 </footer>
 </body>
 </html>
-<!-- force rebuild -->
-<!-- rebuild -->
-<!-- rebuild -->
