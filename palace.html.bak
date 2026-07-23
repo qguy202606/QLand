@@ -44,6 +44,14 @@ main{flex:1}
 footer{background:#f2ece0;border-top:1px solid #d4c8b4;padding:22px 20px;text-align:center;color:#1a1510;font-size:13px;letter-spacing:2px;margin-top:40px}
 @media(max-width:640px){.inner{flex-wrap:wrap} .actions{width:100%} .hero h1{font-size:22px}}
 </style>
+<style>
+:root{--paper:#ffffff;--ink:#1c1711;--muted:#ffffff;--accent:#f5d78e;--border:#5a4638}
+body{background:#f5ecda;color:#1a1510 !important;color:#1a1510 !important}
+p,li{color:#1a1510 !important}
+h1,h2,h3,h4,h5,h6{color:#f5ecda !important}
+a{color:#b08d55 !important}
+small,.muted{color:#1a1510 !important}
+</style>
 </head>
 <body>
 <header class="site">
@@ -57,11 +65,11 @@ footer{background:#f2ece0;border-top:1px solid #d4c8b4;padding:22px 20px;text-al
 </div>
 <div class="actions">
 <a class="btn" href="stories.html">故事目錄</a>
-<a class="btn" href="../index.html">← 總目錄</a>
+<a class="btn" href="/">← 總目錄</a>
 </div>
 </div>
 </header>
-<main class="container"><style>main.container p,main.container div{color:#2a221c}</style>
+<main class="container">
 <div class="hero">
 <h1>宮闈年鑑</h1>
 <p>從 selections 到宮宴，從碎玉到聖旨——後宮不是棋盤，是每個人都在下棋的戰場。選一章開始讀，或一口氣追完。</p>
@@ -74,7 +82,22 @@ footer{background:#f2ece0;border-top:1px solid #d4c8b4;padding:22px 20px;text-al
 <div class="toc-head">章節目錄</div>
 <div class="toc-grid" id="toc-root"></div>
 </div>
-
+<script>
+(()=>{
+const nums=["第一章", "第二章", "第三章", "第四章", "第五章", "第六章", "第七章", "第八章", "第九章", "第十章", "第十一章", "第十二章", "第十三章", "第十四章", "第十五章", "第十六章", "第十七章", "第十八章", "第十九章"];
+const titles=["宮門一閉，便是另一片天", "夜巡的腳步聲", "棋盤上的第一步", "未說完的午膳", "御花園的舊侍女", "暗流", "暗流湧動", "鳳冠之路", "火後", "玉蘭殿的夜", "太后的人", "冷宮的盟友", "夜巡的刺客", "棋手的微笑", "鳳儀台的秘密", "壽宴的暗湧", "冷宮的遺書", "最後一步", "鳳冠"];
+const chars=[...document.querySelectorAll('.ch-body')].map(el=>(el.innerText||el.textContent||'').length);
+const total=chars.reduce((a,b)=>a+b,0);
+document.getElementById('total-words').textContent=total;
+document.getElementById('total-ch').textContent=nums.length;
+const toc=document.getElementById('toc-root');
+nums.forEach((n,i)=>{
+  const r=document.createElement('div');
+  r.className='toc-row';
+  r.innerHTML='<a href="#ch'+(i+1)+'"><span>'+n+'・'+titles[i]+'</span></a><span class="m">'+chars[i]+' 字</span>';
+  toc.appendChild(r);
+});
+})();</script>
 <section id="ch1"><div class="ch-num">第一章</div><div class="ch-title">宮門一閉，便是另一片天</div><div class="ch-body"><p>第一章
 天色未亮，玄武門外還籠著一層薄霧。</p><p>露水沾在宮牆角的草尖上，夜巡的梟鉦敲了三更。除了冷露和青石板上的反光，什麼都沒有。</p><p>她跪在玄武門外，第一批宮燈剛滅。頭上還頂著紅木盤，盤裡放著入宮的冊子，名字寫得端端正正。</p><p>這不是她第一次進宮，卻是第一次以「宮婢」的身份站在這裡。</p><p>她不明白自己為什麼會在這裡。她沒有才華，沒有背景，沒有任何足以讓她站在皇宮內院的原因。唯一的不同，也許是那天禮部選拔時，皇后身邊的訓導姑姑多看了她一眼。</p><p>就因為那一眼，她的名字被記了下來。太監們給她換了新衣，教導姑姑多教了她三日規矩，最後把她分到了最偏遠的含芳殿。</p><p>含芳殿距離冷宮不到二百步，十年沒有人住過。夜裡常有奇怪的聲響從殿裡傳出，宮婢們都說那是舊主子的嘆息。</p><p>她不害怕。真正讓她心悸的，是那一眼之後的沉默——那種被選中卻沒有被真正接受的沉默，像是一道刻在皮膚上的印記，揮之不去。</p><p>含芳殿的規矩很鬆。管事姑姑說，這裡以前住過一位不受寵的嬪妃，死後就再沒人願來。所以殿前階梯上長了青苔，院裡的井多年沒有打過水，連掃地都只掃外殿，內殿從來不進。</p><p>她來的第三天，皇后宮裡來人賞了一筐荔枝。這是她進宮以來第一次見到賞賜，整個含芳殿的宮婢都圍了過來。</p><p>秋姑姑接過賞單，笑著說：「這是皇后娘娘的恩典，你們都要記住。」</p><p>她低下頭，心裡卻明白——這不是皇后的賞賜。</p><p>賞單上的字跡，不是皇后宮中掌事太監的手筆。賞單是假的。有人借著皇后的名義，在試探她的規矩。</p><p>她低下頭，沒有說破，只是安靜地站在那裡，像一塊沒有溫度的石頭。</p><p>入宮第一天，她沒有哭，也沒有覺得委屈。她只記得母親在城門口對她說的最後一句話：「宮裡像棋盤，每一步都有人在看著你。要活下去，先學會安靜。」</p><p>她把這句話壓進心裡，壓到和呼吸融在一起。直到此刻，看著玄武門緩緩闔上，她才真正體會到「安靜」兩個字有多重。</p><p>宮門一閉，便是與世隔絕。從此以後，她只能活在這座大院的高牆之內，活在一雙雙看不見的眼睛底下。</p><p>她知道，這裡沒有人會因為她年紀小而憐憫她。能在後宮活下來的，要麼是狠角色，要麼是安靜到無人注意的人。</p><p>而她，選擇了後者。</p></div><div class="ch-nav"><div><span class="off">← 第一部</span></div><div><a href="#ch2">第二章 →</a></div></div></section>
 <section id="ch2"><div class="ch-num">第二章</div><div class="ch-title">夜巡的腳步聲</div><div class="ch-body"><p>第二章
@@ -111,20 +134,4 @@ footer{background:#f2ece0;border-top:1px solid #d4c8b4;padding:22px 20px;text-al
 秋姑姑的試探，是為了確認她是否有資格成為淑妃的繼承人；
 而淑妃留下的聖旨和名冊，則是整個棋局的核心。</p><p>她現在掌握的，已經足夠多了。</p><p>但她知道，還差最後一步。</p><p>那一步，是要讓王嬪妃親口承認自己的野心。</p><p>第二天一早，她寫了一封信，派人送到了王嬪妃的手中。</p><p>信中只有一句話：「我知道豫王的秘密。」</p><p>王嬪妃看到信後，果然上鉤了。</p><p>當天下午，王嬪妃的宮女來到了含芳殿，態度恭敬卻堅決：「嬪妃娘娘請貴人去一趟鳳儀台。」</p><p>她點了點頭，沒有任何猶豫。</p><p>鳳儀台內，王嬪妃坐在主位上，臉色蒼白卻強作鎮定。</p><p>「妳說，妳知道豫王的秘密？」王嬪妃問道。</p><p>她點點頭。</p><p>「豫王不是皇上親生的，」她緩緩說道，「是先皇與某位宮女生下的孩子。而那道遺旨，寫明了若皇后無子，則由靜公主繼位。」</p><p>王嬪妃的臉色瞬間變得慘白。</p><p>她沒有再說些什麼，只是靜靜地看著王嬪妃。</p><p>「妳想怎麼樣？」王嬪妃問道。</p><p>「我不想怎麼樣，」她說，「我只是想把真相，告訴該知道的人。」</p><p>王嬪妃握住椅子扶手，指節發白。</p><p>「妳敢？」</p><p>她微微一笑：「我為什麼不敢？」</p><p>王嬪妃盯著她看了很久，終於說道：「妳想要什麼？」</p><p>「我要鳳冠。」她說道，「我要後宮之主的位置。」</p><p>王嬪妃笑了，笑聲很淒厲：「妳以為憑這麼一道遺旨，就能登上鳳位？妳太天真了。」</p><p>她低下頭，從懷中取出淑妃的印章和皇后令牌，放在了桌上。</p><p>「我還有這些。」她說道。</p><p>王嬪妃的臉色終於完全垮了下來。</p><p>她知道，她輸了。</p><p>她站起身，冷冷地看著挽冬：「妳會後悔的。」</p><p>挽冬也站起身，目光平靜：「那就等著瞧。」</p><p>王嬪妃拂袖而去。</p><p>她一個人站在鳳儀台內，聽著遠處的雷聲，心裡明白，這場戰爭，她贏了一半。</p><p>但另一半，還在前方等著她。</p><p>她推開鳳儀台的大門，雨水迎面而來。她沒有躲，只是靜靜地站在台階上，感受著風雨的洗禮。</p><p>遠處，宮燈閃爍，像星星點點的希望在黑暗中閃耀。</p><p>她知道，她的道路還很長。</p><p>通往鳳冠的路上，還有無數荊棘和鮮血。</p><p>但她不怕。</p><p>因為她已經不再是那把被動的棋子。</p><p>她是下棋的人。</p><p>而她，終將成為這後宮最耀眼的存在。</p><p>---------</p><p>後記：</p><p>挽冬的故事，暫時告一段落。</p><p>但後宮的傳奇，還在繼續。</p><p>敬請期待《後宮生存錄》第二卷。</p></div><div class="ch-nav"><div><a href="#ch17">← 第十七章</a></div><div><a href="#ch19">第十九章 →</a></div></div></section>
 <section id="ch19"><div class="ch-num">第十九章</div><div class="ch-title">鳳冠</div><div class="ch-body"><p>## 第19章：鳳冠</p><p>王嬪妃倒台後的第三天，皇后下旨，晉升挽冬為妃。</p><p>鳳冠、鳳袍、鳳印，一一送到含芳殿。她接過鳳印的時候，指尖有些顫抖。</p><p>不是因為害怕。</p><p>是因為她終於做到了。</p><p>她站在鏡子前，看著那個穿著鳳袍的自己，想起了玄武門外的母親，想起了含芳殿那個安靜的夜晚，想起了淑妃、秋姑姑、靜公主……所有曾經幫助過她、試探過她、傷害過她的人。</p><p>這些人，都是她通往鳳冠路上的階梯。</p><p>她推開房門，走出含芳殿，走向長樂宮。</p><p>宮道上，宮婢們紛紛側目，一個個低下頭行禮。她沒有說話，只是穩穩地走著，像一隻終於展開翅膀的鳳凰。</p><p>長樂宮內，太后、皇后、靜公主，都在等她。</p><p>她走到殿中央，低下頭，行了一個大禮。</p><p>「奴婢挽冬，叩見太后，叩見皇后。」</p><p>太后笑了，點了點頭：「從今往後，妳就是這後宮的主人。」</p><p>她抬起頭，目光平靜。</p><p>她知道，這不是結束。</p><p>這只是新的開始。</p><p>後宮依舊像棋盤，而她，終於成為了那雙手。</p><p>---------</p><p>（全書完）</p></div><div class="ch-nav"><div><a href="#ch18">← 第十八章</a></div><div><span class="off">最終章 →</span></div></div></section>
-<script>
-(()=>{
-const nums=["第一章", "第二章", "第三章", "第四章", "第五章", "第六章", "第七章", "第八章", "第九章", "第十章", "第十一章", "第十二章", "第十三章", "第十四章", "第十五章", "第十六章", "第十七章", "第十八章", "第十九章"];
-const titles=["宮門一閉，便是另一片天", "夜巡的腳步聲", "棋盤上的第一步", "未說完的午膳", "御花園的舊侍女", "暗流", "暗流湧動", "鳳冠之路", "火後", "玉蘭殿的夜", "太后的人", "冷宮的盟友", "夜巡的刺客", "棋手的微笑", "鳳儀台的秘密", "壽宴的暗湧", "冷宮的遺書", "最後一步", "鳳冠"];
-const chars=[...document.querySelectorAll('.ch-body')].map(el=>(el.innerText||el.textContent||'').length);
-const total=chars.reduce((a,b)=>a+b,0);
-document.getElementById('total-words').textContent=total;
-document.getElementById('total-ch').textContent=nums.length;
-const toc=document.getElementById('toc-root');
-nums.forEach((n,i)=>{
-  const r=document.createElement('div');
-  r.className='toc-row';
-  r.innerHTML='<a href="#ch'+(i+1)+'"><span>'+n+'・'+titles[i]+'</span></a><span class="m">'+chars[i]+' 字</span>';
-  toc.appendChild(r);
-});
-})();</script>
 </main><div class="end">— 本章已完 —</div><footer>QLand — 繁體中文小說平台</footer></body></html>
